@@ -36,31 +36,30 @@
             margin: 0.5rem;
             font-family: 'Matrix Book', 'Times New Roman', Times, serif;
         }
-        img{
-            padding-bottom: 5rem;
+        .slideshow{
+            position: relative;
+            height: 35em;
+            width: 35em;
+            overflow: hidden;
+        }
+        .slide{
+            position: absolute;
+            opacity: 0;
+            transform: translateX(100%);
             width: 100%;
-            height: auto;
-            max-height: 100%;
-            object-fit: contain;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
-        .img-container, .text-container{
-            display: flex;
-            flex-direction: column;
-        }
-        .img-container{
-            align-items: flex-start;
-            justify-content: center;
-        }
-        .images{
-            width: 35rem;
-            height: 35rem;
-            align-items: center;
-            justify-items: center;
-        }
-        .text-container{
-            align-items: flex-start;
-            justify-items: flex-start;
-            margin-left: 6em;
+        .slide.active{
+            opacity: 1;
+            transform: translateX(0);
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
         .flav{
             font-family: 'Stone Serif ITC Medium', 'Times New Roman', Times, serif;
@@ -71,6 +70,7 @@
         .monster{
             display: flex;
             align-items: center;
+            flex-direction: row;
             gap: 5rem;
         }
         .normal{
@@ -95,7 +95,7 @@
         .pendulum{
             background: linear-gradient(to bottom, #D88B59 0%, #D88B59 50%, #1595A9 75%);
         }
-        .pendulum .images{
+        .pendulum .slideshow{
             max-height: 35rem;
         }
         .rit-pend{
@@ -125,24 +125,21 @@
             }
         }
     </style>
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
     <section class="monster link">
-        <div class="img-container">
-            <div class="images">
-                <img class="art access" src="https://ms.yugipedia.com//6/6f/AccesscodeTalker-MADU-EN-VG-artwork.png">
-                <img class="art access" src="https://ms.yugipedia.com//f/f3/AccesscodeTalker-MADU-EN-VG-artwork-2.png">
-                <img class="full-art access" src="https://ms.yugipedia.com//f/fb/AccesscodeTalker-MADU-EN-VG-NC.png">
-                <img class="full-art access" src="https://ms.yugipedia.com//f/f3/AccesscodeTalker-MADU-EN-VG-NC-2.png">
+        <section class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/6f/AccesscodeTalker-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f3/AccesscodeTalker-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/fb/AccesscodeTalker-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f3/AccesscodeTalker-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="access.previous()">Previous</button>
-                <button onclick="access.next()">Next</button>
-                <script>access = w3.slideshow(".access",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
-            
-        </div>
+        </section>
         <div class="text-container">
             <h1>Accesscode Talker</h1>
             <h2>Link Monster</h2>
@@ -151,16 +148,34 @@
             <p>Your opponent cannot activate cards or effects in response to this card's effect activations. If this card is Link Summoned: You can target 1 Link Monster that was used as its Link Material; this card gains ATK equal to that monster's Link Rating x 1000. You can banish 1 Link Monster from your field or GY; destroy 1 card your opponent controls, also for the rest of this turn, you cannot banish monsters with that same Attribute to activate this effect of "Accesscode Talker".</p>
         </div>
     </section>
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/3a/AdamancipatorRisenDragite-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b7/AdamancipatorRisenDragite-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Adamancipator Risen - Dragite</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Rock/WATER/Level 8/ATK 3000/DEF 2200</h2>
+            <p>1 Tuner + 1+ non-Tuner monsters</p>
+            <p>During your Main Phase: You can excavate the top 5 cards of your Deck, and if you do, you can return cards your opponent controls to the hand, up to the number of excavated Rock monsters, also place the excavated cards on the bottom of your Deck in any order. When your opponent activates a Spell/Trap Card or effect, while a WATER monster is in your GY (Quick Effect): You can negate the activation, and if you do, destroy it. You can only use each effect of "Adamancipator Risen - Dragite" once per turn.</p>
+        </div>
+    </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art albion" src="https://ms.yugipedia.com//f/fc/AlbiontheBrandedDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art albion" src="https://ms.yugipedia.com//5/5e/AlbiontheBrandedDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/fc/AlbiontheBrandedDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/5e/AlbiontheBrandedDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="albion.previous()">Previous</button>
-                <button onclick="albion.next()">Next</button>
-                <script>albion = w3.slideshow(".albion",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -173,14 +188,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art sanctifire" src="https://ms.yugipedia.com//1/1b/AlbiontheSanctifireDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art sanctifire" src="https://ms.yugipedia.com//c/cb/AlbiontheSanctifireDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1b/AlbiontheSanctifireDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/cb/AlbiontheSanctifireDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="sanctifire.previous()">Previous</button>
-                <button onclick="sanctifire.next()">Next</button>
-                <script>sanctifire = w3.slideshow(".sanctifire",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -191,16 +205,15 @@
             <p>Cannot be used as Fusion Material. Your opponent cannot target this card with card effects. You can only use each of the following effects of "Albion the Sanctifire Dragon" once per turn. During your opponent's turn (Quick Effect): You can target 2 monsters in any GY(s); Special Summon both monsters, 1 to each field. If this card is in your GY: You can Tribute 4 monsters, the 2 in the Extra Monster Zones and the 2 in the central Main Monster Zones, and if you do, Special Summon this card.</p>
         </div>
     </section>
-    <section class="monster ritual">
+        <section class="monster ritual">
         <div class="img-container">
-            <div class="images">
-                <img class="art ame" src="https://ms.yugipedia.com//5/5e/AmenoMurakumonoMitsurugi-MADU-EN-VG-artwork.png">
-                <img class="full-art ame" src="https://ms.yugipedia.com//b/b6/AmenoMurakumonoMitsurugi-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/5e/AmenoMurakumonoMitsurugi-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b6/AmenoMurakumonoMitsurugi-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="ame.previous()">Previous</button>
-                <button onclick="ame.next()">Next</button>
-                <script>ame = w3.slideshow(".ame",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -212,16 +225,14 @@
     </section>
     <section class="monster pendulum">
         <div class="img-container">
-            <div class="images">
-                <img class="art antihuman" src="https://ms.yugipedia.com//d/d0/AntihumanIntelligenceMEPSYYA-MADU-EN-VG-artwork.png">
-                <img class="full-art antihuman" src="https://ms.yugipedia.com//c/ca/AntihumanIntelligenceMEPSYYA-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/d0/AntihumanIntelligenceMEPSYYA-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/ca/AntihumanIntelligenceMEPSYYA-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="antihuman.previous()">Previous</button>
-                <button onclick="antihuman.next()">Next</button>
-                <script>antihuman = w3.slideshow(".antihuman",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
-        </div>
         <div class="text-container">
             <h1>Antihuman Intelligence ME-PSY-YA</h1>
             <h2>Pendulum Monster</h2>
@@ -232,14 +243,13 @@
     </section>
     <section class="monster pendulum">
         <div class="img-container">
-            <div class="images">
-                <img class="art astrograph" src="https://ms.yugipedia.com//f/fc/AstrographSorcerer-MADU-EN-VG-artwork.png">
-                <img class="full-art astrograph" src="https://ms.yugipedia.com//a/a2/AstrographSorcerer-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/fc/AstrographSorcerer-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/a2/AstrographSorcerer-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="astrograph.previous()">Previous</button>
-                <button onclick="astrograph.next()">Next</button>
-                <script>astrograph = w3.slideshow(".astrograph",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -252,14 +262,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art armityle" src="https://ms.yugipedia.com//b/b9/ArmityletheChaosPhantasmPhantomofFury-MADU-EN-VG-artwork.png">
-                <img class="full-art armityle" src="https://ms.yugipedia.com//a/a2/ArmityletheChaosPhantasmPhantomofFury-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b9/ArmityletheChaosPhantasmPhantomofFury-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/a2/ArmityletheChaosPhantasmPhantomofFury-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="armityle.previous()">Previous</button>
-                <button onclick="armityle.next()">Next</button>
-                <script>armityle = w3.slideshow(".armityle",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -272,14 +281,13 @@
     </section>
     <section class="monster ritual">
         <div class="img-container">
-            <div class="images">
-                <img class="art bls-legend" src="https://ms.yugipedia.com//9/99/BlackLusterSoldierLegendarySwordsman-MADU-EN-VG-artwork.png">
-                <img class="full-art bls-legend" src="https://ms.yugipedia.com//f/ff/BlackLusterSoldierLegendarySwordsman-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/99/BlackLusterSoldierLegendarySwordsman-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/ff/BlackLusterSoldierLegendarySwordsman-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="bls_legend.previous()">Previous</button>
-                <button onclick="bls_legend.next()">Next</button>
-                <script>bls_legend = w3.slideshow(".bls-legend",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div  class="text-container">
@@ -291,16 +299,15 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art black-rose" src="https://ms.yugipedia.com//a/a5/BlackRoseDragon-MADU-EN-VG-artwork.png">
-                <img class="art black-rose" src="https://ms.yugipedia.com//2/2a/BlackRoseDragon-MADU-EN-VG-artwork-2.png">
-                <img class="full-art black-rose" src="https://ms.yugipedia.com//0/02/BlackRoseDragon-MADU-EN-VG-NC.png">
-                <img class="full-art black-rose" src="https://ms.yugipedia.com//b/b6/BlackRoseDragon-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/a5/BlackRoseDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/2a/BlackRoseDragon-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/02/BlackRoseDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b6/BlackRoseDragon-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="black_rose.previous()">Previous</button>
-                <button onclick="black_rose.next()">Next</button>
-                <script>black_rose = w3.slideshow(".black-rose",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -313,14 +320,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art black-winged" src="https://ms.yugipedia.com//c/cd/BlackWingedAssaultDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art black-winged" src="https://ms.yugipedia.com//4/4f/BlackWingedAssaultDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/cd/BlackWingedAssaultDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/4f/BlackWingedAssaultDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="black_winged.previous()">Previous</button>
-                <button onclick="black_winged.next()">Next</button>
-                <script>black_winged = w3.slideshow(".black-winged",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -333,15 +339,14 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art cartesia" src="https://ms.yugipedia.com//8/89/BlazingCartesiatheVirtuous-MADU-JP-VG-artwork.png">
-                <img class="art cartesia" src="https://ms.yugipedia.com//6/64/BlazingCartesiatheVirtuous-MADU-JP-VG-artwork-2.png">
-                <img class="full-art cartesia" src="https://ms.yugipedia.com//d/da/BlazingCartesiatheVirtuous-MADU-JP-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/89/BlazingCartesiatheVirtuous-MADU-JP-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/64/BlazingCartesiatheVirtuous-MADU-JP-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/da/BlazingCartesiatheVirtuous-MADU-JP-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="cartesia.previous()">Previous</button>
-                <button onclick="cartesia.next()">Next</button>
-                <script>cartesia = w3.slideshow(".cartesia",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -353,14 +358,13 @@
     </section>
     <section class="monster ritual">
         <div class="img-container">
-            <div class="images">
-                <img class="art chaos-max" src="https://ms.yugipedia.com//6/65/BlueEyesChaosMAXDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art chaos-max" src="https://ms.yugipedia.com//1/14/BlueEyesChaosMAXDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/65/BlueEyesChaosMAXDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/14/BlueEyesChaosMAXDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="chaos_max.previous()">Previous</button>
-                <button onclick="chaos_max.next()">Next</button>
-                <script>chaos_max = w3.slideshow(".chaos-max",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -372,14 +376,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art ult-spirit" src="https://ms.yugipedia.com//8/8c/BlueEyesUltimateSpiritDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art ult-spirit" src="https://ms.yugipedia.com//6/62/BlueEyesUltimateSpiritDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/8c/BlueEyesUltimateSpiritDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/62/BlueEyesUltimateSpiritDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="ult_spirit.previous()">Previous</button>
-                <button onclick="ult_spirit.next()">Next</button>
-                <script>ult_spirit = w3.slideshow(".ult-spirit",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -390,18 +393,17 @@
             <p>Your opponent cannot banish cards from your GY. You can only use each of the following effects of "Blue-Eyes Ultimate Spirit Dragon" once per turn. When a card or effect is activated on the field (Quick Effect): You can negate the activation, and if you do, this card gains 1000 ATK until the end of this turn. If this card is destroyed by battle or card effect: You can Special Summon 1 LIGHT Dragon monster from your GY, except "Blue-Eyes Ultimate Spirit Dragon".</p>
         </div>
     </section>
-    <section class="monster normal">
+        <section class="monster normal">
         <div class="img-container">
-            <div class="images">
-                <img class="art blue-eyes" src="https://ms.yugipedia.com//1/1d/BlueEyesWhiteDragon-MADU-EN-VG-artwork.png">
-                <img class="art blue-eyes" src="https://ms.yugipedia.com//1/16/BlueEyesWhiteDragon-MADU-EN-VG-artwork-2.png">
-                <img class="full-art blue-eyes" src="https://ms.yugipedia.com//7/7c/BlueEyesWhiteDragon-MADU-EN-VG-NC.png">
-                <img class="full-art blue-eyes" src="https://ms.yugipedia.com//3/34/BlueEyesWhiteDragon-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1d/BlueEyesWhiteDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/16/BlueEyesWhiteDragon-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/7c/BlueEyesWhiteDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/34/BlueEyesWhiteDragon-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="blue_eyes.previous()">Previous</button>
-                <button onclick="blue_eyes.next()">Next</button>
-                <script>blue_eyes = w3.slideshow(".blue-eyes",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -411,18 +413,17 @@
             <p class="flav">This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.</p>
         </div>
     </section>
-    <section class="monster synchro">
+        <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art clear-wing" src="https://ms.yugipedia.com//f/fd/ClearWingSynchroDragon-MADU-EN-VG-artwork.png">
-                <img class="art clear-wing" src="https://ms.yugipedia.com//7/7d/ClearWingSynchroDragon-MADU-EN-VG-artwork-2.png">
-                <img class="full-art clear-wing" src="https://ms.yugipedia.com//8/8f/ClearWingSynchroDragon-MADU-EN-VG-NC.png">
-                <img class="full-art clear-wing" src="https://ms.yugipedia.com//0/00/ClearWingSynchroDragon-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/fd/ClearWingSynchroDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/7d/ClearWingSynchroDragon-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/8f/ClearWingSynchroDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/00/ClearWingSynchroDragon-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="clear_wing.previous()">Previous</button>
-                <button onclick="clear_wing.next()">Next</button>
-                <script>clear_wing = w3.slideshow(".clear-wing",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -433,16 +434,15 @@
             <p>Once per turn, when another Level 5 or higher monster activates its effect on the field (Quick Effect): You can negate the activation, and if you do, destroy it. Once per turn, when a monster effect is activated that targets 1 Level 5 or higher monster on the field (and no other cards) (Quick Effect): You can negate the activation, and if you do, destroy it. If this card's effect destroys a monster, this card gains ATK equal to the destroyed monster's original ATK until the end of this turn.</p>
         </div>
     </section>
-    <section class="monster synchro">
+        <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art cosmic-blazar" src="https://ms.yugipedia.com//1/14/CosmicBlazarDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art cosmic-blazar" src="https://ms.yugipedia.com//e/e4/CosmicBlazarDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/14/CosmicBlazarDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//e/e4/CosmicBlazarDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="cosmic_blazar.previous()">Previous</button>
-                <button onclick="cosmic_blazar.next()">Next</button>
-                <script>cosmic_blazar = w3.slideshow(".cosmic-blazar",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -453,16 +453,15 @@
             <p>Must be Synchro Summoned. (Quick Effect): You can banish this card until the End Phase to activate 1 of these effects; <br>●When your opponent activates a card or effect: Negate the activation, and if you do, destroy that card. <br>●When your opponent would Summon a monster(s): Negate the Summon, and if you do, destroy that monster(s). <br>●When an opponent's monster declares an attack: Negate the attack, then end the Battle Phase.</p>
         </div>
     </section>
-    <section class="monster synchro">
+        <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art cosmic-blazar" src="https://ms.yugipedia.com//a/aa/CosmicQuasarDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art cosmic-blazar" src="https://ms.yugipedia.com//4/46/CosmicQuasarDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/aa/CosmicQuasarDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/46/CosmicQuasarDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="cosmic_quasar.previous()">Previous</button>
-                <button onclick="cosmic_quasar.next()">Next</button>
-                <script>cosmic_quasar = w3.slideshow(".cosmic-quasar",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -475,14 +474,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art over-synchro" src="https://ms.yugipedia.com//8/81/CrystalClearWingOverSynchroDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art over-synchro" src="https://ms.yugipedia.com//2/26/CrystalClearWingOverSynchroDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/81/CrystalClearWingOverSynchroDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/26/CrystalClearWingOverSynchroDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="over_synchro.previous()">Previous</button>
-                <button onclick="over_synchro.next()">Next</button>
-                <script>over_synchro = w3.slideshow(".over-synchro",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -495,14 +493,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art crimson" src="https://ms.yugipedia.com//5/54/CrimsonDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art crimson" src="https://ms.yugipedia.com//3/3c/CrimsonDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/54/CrimsonDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/3c/CrimsonDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="crimson.previous()">Previous</button>
-                <button onclick="crimson.next()">Next</button>
-                <script>crimson = w3.slideshow(".crimson",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -513,18 +510,16 @@
             <p>If this card is Special Summoned: You can add 1 Spell/Trap that mentions "Crimson Dragon" from your Deck to your hand. (Quick Effect): You can target 1 Level 7 or higher Synchro Monster on the field, except "Crimson Dragon"; return this card to the Extra Deck, and if you do, Special Summon 1 Dragon Synchro Monster from your Extra Deck with the same Level as the targeted monster. (This is treated as a Synchro Summon.) You can only use each effect of "Crimson Dragon" once per turn.</p>
         </div>
     </section>
-        <section class="monster fusion">
+    <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art cyber-end" src="https://ms.yugipedia.com//e/e9/CyberEndDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art cyber-end" src="https://ms.yugipedia.com//b/bf/CyberEndDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/e9/CyberEndDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/bf/CyberEndDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="cyber_end.previous()">Previous</button>
-                <button onclick="cyber_end.next()">Next</button>
-                <script>cyber_end = w3.slideshow(".cyber-end",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
-
         </div>
         <div class="text-container">
             <h1>Cyber End Dragon</h1>
@@ -536,14 +531,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art cyber-infinity" src="https://ms.yugipedia.com//6/60/CyberDragonInfinity-MADU-EN-VG-artwork.png">
-                <img class="full-art cyber-infinity" src="https://ms.yugipedia.com//9/90/CyberDragonInfinity-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/60/CyberDragonInfinity-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/90/CyberDragonInfinity-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="cyber_infinity.previous()">Previous</button>
-                <button onclick="cyber_infinity.next()">Next</button>
-                <script>cyber_infinity = w3.slideshow(".cyber-infinity",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -556,14 +550,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art cyberdark" src="https://ms.yugipedia.com//8/89/CyberdarkEndDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art cyberdark" src="https://ms.yugipedia.com//2/2b/CyberdarkEndDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/89/CyberdarkEndDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/2b/CyberdarkEndDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="cyberdark.previous()">Previous</button>
-                <button onclick="cyberdark.next()">Next</button>
-                <script>cyberdark = w3.slideshow(".cyberdark",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -576,14 +569,13 @@
     </section>
     <section class="monster xyz-pend">
         <div class="img-container">
-            <div class="images">
-                <img class="art machinex" src="https://ms.yugipedia.com//5/59/DDDDeviserKingDeusMachinex-MADU-EN-VG-artwork.png">
-                <img class="full-art machinex" src="https://ms.yugipedia.com//1/15/DDDDeviserKingDeusMachinex-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/59/DDDDeviserKingDeusMachinex-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/15/DDDDeviserKingDeusMachinex-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="machinex.previous()">Previous</button>
-                <button onclick="machinex.next()">Next</button>
-                <script>machinex = w3.slideshow(".machinex",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -595,18 +587,17 @@
             <p>You can also Xyz Summon this card by using a "D/D/D" monster you control (transfer its materials to this card). You can only control 1 "D/D/D Deviser King Deus Machinex" in your Monster Zone. Once per Chain, when a Monster Card your opponent controls activates its effect (Quick Effect): You can either detach 2 materials from this card, or destroy 1 "Dark Contract" card you control, and if you do, attach that opponent's card to this card. Once per turn, during your Standby Phase: You can place this card in your Pendulum Zone.</p>
         </div>
     </section>
-    <section class="monster normal">
+        <section class="monster normal">
         <div class="img-container">
-            <div class="images">
-                <img class="art dark-magician" src="https://ms.yugipedia.com//5/53/DarkMagician-MADU-EN-VG-artwork.png">
-                <img class="art dark-magician" src="https://ms.yugipedia.com//9/92/DarkMagician-MADU-EN-VG-artwork-2.png">
-                <img class="full-art dark-magician" src="https://ms.yugipedia.com//6/63/DarkMagician-MADU-EN-VG-NC.png">
-                <img class="full-art dark-magician" src="https://ms.yugipedia.com//3/33/DarkMagician-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/53/DarkMagician-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/92/DarkMagician-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/63/DarkMagician-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/33/DarkMagician-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="dark_magician.previous()">Previous</button>
-                <button onclick="dark_magician.next()">Next</button>
-                <script>dark_magician = w3.slideshow(".dark-magician",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -618,14 +609,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art dmg" src="https://ms.yugipedia.com//0/00/DarkMagicianGirltheMagiciansApprentice-MADU-EN-VG-artwork.png">
-                <img class="full-art dmg" src="https://ms.yugipedia.com//3/3e/DarkMagicianGirltheMagiciansApprentice-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/00/DarkMagicianGirltheMagiciansApprentice-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/3e/DarkMagicianGirltheMagiciansApprentice-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="dmg.previous()">Previous</button>
-                <button onclick="dmg.next()">Next</button>
-                <script>dmg = w3.slideshow(".dmg",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -635,16 +625,15 @@
             <p>You can Special Summon this card (from your hand) by discarding 1 card, and if you do, this card's name becomes "Dark Magician Girl". You can only Special Summon "Dark Magician Girl the Magician's Apprentice" once per turn this way. If this card is Normal or Special Summoned: You can add 1 "Shining Sarcophagus" from your Deck to your hand. You can only use this effect of "Dark Magician Girl the Magician's Apprentice" once per turn. Gains 300 ATK for each monster that mentions "Shining Sarcophagus" in the GYs.</p>
         </div>
     </section>
-    <section class="monster xyz">
+        <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art dark-rebellion" src="https://ms.yugipedia.com//9/95/DarkRebellionXyzDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art dark-rebellion" src="https://ms.yugipedia.com//a/a9/DarkRebellionXyzDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/95/DarkRebellionXyzDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/a9/DarkRebellionXyzDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="dark_rebellion.previous()">Previous</button>
-                <button onclick="dark_rebellion.next()">Next</button>
-                <script>dark_rebellion = w3.slideshow(".dark-rebellion",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -657,14 +646,13 @@
     </section>
     <section class="monster link">
         <div class="img-container">
-            <div class="images">
-                <img class="art decode" src="https://ms.yugipedia.com//1/15/DecodeTalker-MADU-EN-VG-artwork.png">
-                <img class="full-art decode" src="https://ms.yugipedia.com//5/52/DecodeTalker-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/15/DecodeTalker-MADU-EN-VG-artwork.png');">
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/52/DecodeTalker-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="decode.previous()">Previous</button>
-                <button onclick="decode.next()">Next</button>
-                <script>decode = w3.slideshow(".decode",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -677,14 +665,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art diabell" src="https://ms.yugipedia.com//7/7a/DiabellQueenoftheWhiteForest-MADU-EN-VG-artwork.png">
-                <img class="full-art diabell" src="https://ms.yugipedia.com//d/d8/DiabellQueenoftheWhiteForest-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/7a/DiabellQueenoftheWhiteForest-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/d8/DiabellQueenoftheWhiteForest-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="diaell.previous()">Previous</button>
-                <button onclick="diabell.next()">Next</button>
-                <script>diabell = w3.slideshow(".diabell",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -697,16 +684,15 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art diabellstar" src="https://ms.yugipedia.com//f/f5/DiabellstartheBlackWitch-MADU-EN-VG-artwork.png">
-                <img class="art diabellstar" src="https://ms.yugipedia.com//3/33/DiabellstartheBlackWitch-MADU-JP-VG-artwork-2.png">
-                <img class="full-art diabellstar" src="https://ms.yugipedia.com//6/62/DiabellstartheBlackWitch-MADU-JP-VG-NC.png">
-                <img class="full-art diabellstar" src="https://ms.yugipedia.com//c/c4/DiabellstartheBlackWitch-MADU-JP-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f5/DiabellstartheBlackWitch-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/33/DiabellstartheBlackWitch-MADU-JP-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/62/DiabellstartheBlackWitch-MADU-JP-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/c4/DiabellstartheBlackWitch-MADU-JP-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="diabellstar.previous()">Previous</button>
-                <button onclick="diabellstar.next()">Next</button>
-                <script>diabellstar = w3.slideshow(".diabellstar",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -718,14 +704,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art diabellze" src="https://ms.yugipedia.com//6/67/DiabellzetheOriginalSinkeeper-MADU-EN-VG-artwork.png">
-                <img class="full-art diabellze" src="https://ms.yugipedia.com//b/be/DiabellzetheOriginalSinkeeper-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/67/DiabellzetheOriginalSinkeeper-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/be/DiabellzetheOriginalSinkeeper-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="diabellze.previous()">Previous</button>
-                <button onclick="diabellze.next()">Next</button>
-                <script>diabellze = w3.slideshow(".diabellze",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -735,16 +720,15 @@
             <p>If a "Sinful Spoils" card is in either player's GY, you can Special Summon this card (from your hand). You can only Special Summon "Diabellze the Original Sinkeeper" once per turn this way. Your opponent must Set Spell/Trap Cards before activating them. If a Spell/Trap becomes Set on the field, while this card is in the Monster Zone (except during the Damage Step): You can target 1 card you control and 1 card your opponent controls; destroy them. You can only use this effect of "Diabellze the Original Sinkeeper" once per turn.</p>
         </div>
     </section>
-    <section class="monster effect">
+        <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art fleurdelis" src="https://ms.yugipedia.com//c/c1/DogmatikaFleurdelistheKnighted-MADU-EN-VG-artwork.png">
-                <img class="full-art fleurdelis" src="https://ms.yugipedia.com//1/15/DogmatikaFleurdelistheKnighted-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/c1/DogmatikaFleurdelistheKnighted-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/15/DogmatikaFleurdelistheKnighted-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="fleurdelis.previous()">Previous</button>
-                <button onclick="fleurdelis.next()">Next</button>
-                <script>fleurdelis = w3.slideshow(".fleurdelis",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -756,15 +740,14 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art disaster" src="https://ms.yugipedia.com//8/8d/DisasterDragonRulerofAllApocalypses-MADU-EN-VG-artwork.png">
-                <img class="full-art disaster" src="https://ms.yugipedia.com//0/0a/DisasterDragonRulerofAllApocalypses-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/8d/DisasterDragonRulerofAllApocalypses-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/0a/DisasterDragonRulerofAllApocalypses-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="disaster.previous()">Previous</button>
-                <button onclick="disaster.next()">Next</button>
-                <script>disaster = w3.slideshow(".disaster",0);</script>
-            </div>  
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
         </div>
         <div class="text-container">
             <h1>Disaster, Dragon Ruler of All Apocalypses</h1>
@@ -776,14 +759,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art zeus" src="https://ms.yugipedia.com//1/1b/DivineArsenalAAZEUSSkyThunder-MADU-EN-VG-artwork.png">
-                <img class="full-art zeus" src="https://ms.yugipedia.com//3/3d/DivineArsenalAAZEUSSkyThunder-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1b/DivineArsenalAAZEUSSkyThunder-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/3d/DivineArsenalAAZEUSSkyThunder-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="zeus.previous()">Previous</button>
-                <button onclick="zeus.next()">Next</button>
-                <script>zeus = w3.slideshow(".zeus",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -794,16 +776,15 @@
             <p>Once per turn, if an Xyz Monster battled this turn, you can also Xyz Summon "Divine Arsenal AA-ZEUS - Sky Thunder" by using 1 Xyz Monster you control as material. (Transfer its materials to this card.) (Quick Effect): You can detach 2 materials from this card; send all other cards from the field to the GY. Once per turn, if another card(s) you control is destroyed by battle or an opponent's card effect: You can attach 1 card from your hand, Deck, or Extra Deck to this card as material.</p>
         </div>
     </section>
-    <section class="monster fusion">
+        <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art magia" src="https://ms.yugipedia.com//3/30/DragonMasterMagia-MADU-EN-VG-artwork.png">
-                <img class="full-art magia" src="https://ms.yugipedia.com//8/8d/DragonMasterMagia-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/30/DragonMasterMagia-MADU-EN-VG-artwork.png');">
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/8d/DragonMasterMagia-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="magia.previous()">Previous</button>
-                <button onclick="magia.next()">Next</button>
-                <script>magia = w3.slideshow(".magia",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -816,15 +797,14 @@
     </section>
     <section class="monster normal">
         <div class="img-container">
-            <div class="images">
-                <img class="art neos" src="https://ms.yugipedia.com//f/f9/ElementalHERONeos-MADU-EN-VG-artwork.png">
-                <img class="art neos" src="https://ms.yugipedia.com//1/1b/ElementalHERONeos-MADU-EN-VG-artwork-2.png">
-                <img class="full-art neos" src="https://ms.yugipedia.com//e/ef/ElementalHERONeos-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f9/ElementalHERONeos-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/1b/ElementalHERONeos-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//e/ef/ElementalHERONeos-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="neos.previous()">Previous</button>
-                <button onclick="neos.next()">Next</button>
-                <script>neos = w3.slideshow(".neos",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -834,16 +814,53 @@
             <p class="flav">A new Elemental HERO has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian his unknown powers are unleashed.</p>
         </div>
     </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/0d/FirewallDragonSingularity-MADU-EN-VG-artwork.png');">
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/65/FirewallDragonSingularity-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Firewall Dragon Singularity</h1>
+            <h2>Link Monster</h2>
+            <h2>Cyberse/DARK/←↖↑↗→↓/ATK 3500/LINK-6</h2>
+            <p>3+ Effect Monsters</p>
+            <p>(Quick Effect): You can target cards your opponent controls or in their GY up to the number of different card types (Ritual, Fusion, Synchro, Xyz) you control and in your GY; return them to the hand, also this card gains 500 ATK for each returned card. If a monster this card points to is destroyed by battle, or sent to the GY: You can target 1 Cyberse monster in your GY; Special Summon it. You can only use each effect of "Firewall Dragon Singularity" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/de/FirewallDragon-MADU-EN-VG-artwork.png');">
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f6/FirewallDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Firewall Dragon</h1>
+            <h2>Link Monster</h2>
+            <h2>Cyberse/DARK/←↑→↓/ATK 2500/LINK-4</h2>
+            <p>2+ monsters</p>
+            <p>Once while face-up on the field (Quick Effect): You can target monsters on the field and/or GY up to the number of monsters co-linked to this card; return them to the hand. If a monster this card points to is destroyed by battle or sent to the GY: You can Special Summon 1 Cyberse monster from your hand. You can only use each effect of "Firewall Dragon" once per turn.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art photon" src="https://ms.yugipedia.com//a/aa/GalaxyEyesPhotonDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art photon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/df3pbv8-789b0445-c5a4-4129-aabf-5c16c62978ec.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGYzcGJ2OC03ODliMDQ0NS1jNWE0LTQxMjktYWFiZi01YzE2YzYyOTc4ZWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Hoc_aBvl80UfjUMENLHAgZCelXVbskTljqyNfwP61o4">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/aa/GalaxyEyesPhotonDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://slideshow-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/df3pbv8-789b0445-c5a4-4129-aabf-5c16c62978ec.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGYzcGJ2OC03ODliMDQ0NS1jNWE0LTQxMjktYWFiZi01YzE2YzYyOTc4ZWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Hoc_aBvl80UfjUMENLHAgZCelXVbskTljqyNfwP61o4');"></div>
             </div>
-            <div>
-                <button onclick="photon.previous()">Previous</button>
-                <button onclick="photon.next()">Next</button>
-                <script>photon = w3.slideshow(".photon",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -855,14 +872,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art grapha" src="https://ms.yugipedia.com//f/fa/GraphaDragonOverlordofDarkWorld-MADU-EN-VG-artwork.png">
-                <img class="full-art grapha" src="https://ms.yugipedia.com//1/12/GraphaDragonOverlordofDarkWorld-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/fa/GraphaDragonOverlordofDarkWorld-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/12/GraphaDragonOverlordofDarkWorld-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="grapha.previous()">Previous</button>
-                <button onclick="grapha.next()">Next</button>
-                <script>grapha = w3.slideshow(".grapha",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -875,14 +891,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art horus" src="https://ms.yugipedia.com//5/5c/HorustheBlackFlameDeity-MADU-EN-VG-artwork.png">
-                <img class="full-art horus" src="https://ms.yugipedia.com//0/06/HorustheBlackFlameDeity-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/5c/HorustheBlackFlameDeity-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/06/HorustheBlackFlameDeity-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="horus.previous()">Previous</button>
-                <button onclick="horus.next()">Next</button>
-                <script>horus = w3.slideshow(".horus",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -892,18 +907,38 @@
             <p>If you control a "Horus" monster and "King's Sarcophagus": You can reveal this card in your hand, then send 1 card from your hand or field to the GY; send 1 card on the field to the GY. If a face-up "Horus" monster(s) you control, except "Horus the Black Flame Deity", or a face-up "King's Sarcophagus" you control, leaves the field by an opponent's card effect (except during the Damage Step): You can Special Summon this card from your hand, then you can send all other monsters on the field to the GY. You can only use each effect of "Horus the Black Flame Deity" once per turn.</p>
         </div>
     </section>
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/97/JunkWarrior-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/79/JunkWarrior-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//e/e7/JunkWarrior-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/08/JunkWarrior-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Junk Warrior</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Machine/DARK/Level 5/ATK 2300/DEF 1300</h2>
+            <p>"Junk Synchron" + 1+ non-Tuner monsters</p>
+            <p>If this card is Synchro Summoned: It gains ATK equal to the total ATK of all Level 2 or lower monsters you currently control.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art lady-lab" src="https://ms.yugipedia.com//4/4f/LadyLabrynthoftheSilverCastle-MADU-EN-VG-artwork.png">
-                <img class="art lady-lab" src="https://ms.yugipedia.com//8/87/LadyLabrynthoftheSilverCastle-MADU-EN-VG-artwork-2.png">
-                <img class="full-art lady-lab" src="https://ms.yugipedia.com//7/74/LadyLabrynthoftheSilverCastle-MADU-EN-VG-NC.png">
-                <img class="full-art lady-lab" src="https://ms.yugipedia.com//c/cf/LadyLabrynthoftheSilverCastle-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide lady-lab" style="background-image: url('https://ms.yugipedia.com//4/4f/LadyLabrynthoftheSilverCastle-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide lady-lab" style="background-image: url('https://ms.yugipedia.com//8/87/LadyLabrynthoftheSilverCastle-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide lady-lab" style="background-image: url('https://ms.yugipedia.com//7/74/LadyLabrynthoftheSilverCastle-MADU-EN-VG-NC.png');"></div>
+                <div class="slide lady-lab" style="background-image: url('https://ms.yugipedia.com//c/cf/LadyLabrynthoftheSilverCastle-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="lady_lab.previous()">Previous</button>
-                <button onclick="lady_lab.next()">Next</button>
-                <script>lady_lab = w3.slideshow(".lady-lab",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -915,14 +950,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art lovely-lab" src="https://ms.yugipedia.com//6/64/LovelyLabrynthoftheSilverCastle-MADU-JP-VG-artwork.png">
-                <img class="full-art lovely-lab" src="https://ms.yugipedia.com//c/c4/LovelyLabrynthoftheSilverCastle-MADU-JP-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/64/LovelyLabrynthoftheSilverCastle-MADU-JP-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/c4/LovelyLabrynthoftheSilverCastle-MADU-JP-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="lovely_lab.previous()">Previous</button>
-                <button onclick="lovely_lab.next()">Next</button>
-                <script>lovely_lab = w3.slideshow(".lovely-lab",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -934,14 +968,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art nightmare-app" src="https://ms.yugipedia.com//f/f5/NightmareApprentice-MADU-EN-VG-artwork.png">
-                <img class="full-art nightmare-app" src="https://ms.yugipedia.com//4/49/NightmareApprentice-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f5/NightmareApprentice-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/49/NightmareApprentice-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="nightmare_app.previous()">Previous</button>
-                <button onclick="nightmare_app.next()">Next</button>
-                <script>nightmare_app = w3.slideshow(".nightmare-app",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -953,14 +986,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art nightmare-mag" src="https://ms.yugipedia.com//a/a6/NightmareMagician-MADU-EN-VG-artwork.png">
-                <img class="full-art nightmare-mag" src="https://ms.yugipedia.com//4/45/NightmareMagician-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/a6/NightmareMagician-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/45/NightmareMagician-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="nightmare_mag.previous()">Previous</button>
-                <button onclick="nightmare_mag.next()">Next</button>
-                <script>nightmare_mag = w3.slideshow(".nightmare-mag",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -972,14 +1004,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art utopia" src="https://ms.yugipedia.com//1/1a/Number39Utopia-MADU-EN-VG-artwork.png">
-                <img class="full-art utopia" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/df40kq9-825707a4-d26a-4879-a7b3-f59833405383.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGY0MGtxOS04MjU3MDdhNC1kMjZhLTQ4NzktYTdiMy1mNTk4MzM0MDUzODMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cIGj7LnRZhaY7tBrcK9qIPtphc66nmAGFXw8hy-Xisw">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1a/Number39Utopia-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/df40kq9-825707a4-d26a-4879-a7b3-f59833405383.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGY0MGtxOS04MjU3MDdhNC1kMjZhLTQ4NzktYTdiMy1mNTk4MzM0MDUzODMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cIGj7LnRZhaY7tBrcK9qIPtphc66nmAGFXw8hy-Xisw');"></div>
             </div>
-            <div>
-               <button onclick="utopia.previous()">Previous</button>
-                <button onclick="utopia.next()">Next</button>
-                <script>utopia = w3.slideshow(".utopia",0);</script> 
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -992,14 +1023,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art tachyon" src="https://ms.yugipedia.com//8/89/Number107GalaxyEyesTachyonDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art tachyon" src="https://ms.yugipedia.com//1/1b/Number107GalaxyEyesTachyonDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/89/Number107GalaxyEyesTachyonDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/1b/Number107GalaxyEyesTachyonDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-               <button onclick="tachyon.previous()">Previous</button>
-                <button onclick="tachyon.next()">Next</button>
-                <script>tachyon = w3.slideshow(".tachyon",0);</script> 
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1012,14 +1042,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art neo-prime" src="https://ms.yugipedia.com//7/78/NumberC62NeoGalaxyEyesPrimePhotonDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art neo-prime" src="https://ms.yugipedia.com//7/75/NumberC62NeoGalaxyEyesPrimePhotonDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/78/NumberC62NeoGalaxyEyesPrimePhotonDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/75/NumberC62NeoGalaxyEyesPrimePhotonDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="neo_prime.previous()">Previous</button>
-                <button onclick="neo_prime.next()">Next</button>
-                <script>neo_prime = w3.slideshow(".neo-prime",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1034,14 +1063,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art draco-future" src="https://ms.yugipedia.com//6/6d/NumberF0UtopicDracoFuture-MADU-EN-VG-artwork.png">
-                <img class="full-art draco-future" src="https://ms.yugipedia.com//7/73/NumberF0UtopicDracoFuture-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/6d/NumberF0UtopicDracoFuture-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/73/NumberF0UtopicDracoFuture-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="draco_future.previous()">Previous</button>
-                <button onclick="draco_future.next()">Next</button>
-                <script>draco_future = w3.slideshow(".draco-future",0);</script> 
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1055,14 +1083,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art future" src="https://ms.yugipedia.com//e/ee/NumberF0UtopicFuture-MADU-EN-VG-artwork.png">
-                <img class="full-art future" src="https://ms.yugipedia.com//a/a2/NumberF0UtopicFuture-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/ee/NumberF0UtopicFuture-MADU-EN-VG-artwork.png');"></div>
+                <div class="slides" style="background-image: url('https://ms.yugipedia.com//a/a2/NumberF0UtopicFuture-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="future.previous()">Previous</button>
-                <button onclick="future.next()">Next</button>
-                <script>future = w3.slideshow(".future",0);</script> 
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1076,14 +1103,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art future-zexal" src="https://ms.yugipedia.com//2/21/NumberF0UtopicFutureZexal-MADU-EN-VG-artwork.png">
-                <img class="full-art future-zexal" src="https://ms.yugipedia.com//6/6e/NumberF0UtopicFutureZexal-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/21/NumberF0UtopicFutureZexal-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/6e/NumberF0UtopicFutureZexal-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="future_zexal.previous()">Previous</button>
-                <button onclick="future_zexal.next()">Next</button>
-                <script>future_zexal = w3.slideshow(".future-zexal",0);</script> 
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1097,16 +1123,15 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art obelisk" src="https://ms.yugipedia.com//0/03/ObelisktheTormentor-MADU-EN-VG-artwork.png">
-                <img class="art obelisk" src="https://ms.yugipedia.com//9/94/ObelisktheTormentor-MADU-EN-VG-artwork-2.png">
-                <img class="full-art obelisk" src="https://ms.yugipedia.com//6/6e/ObelisktheTormentor-MADU-EN-VG-NC.png">
-                <img class="full-art obelisk" src="https://ms.yugipedia.com//6/65/ObelisktheTormentor-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/03/ObelisktheTormentor-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/94/ObelisktheTormentor-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/6e/ObelisktheTormentor-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/65/ObelisktheTormentor-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="obelisk.previous()">Previous</button>
-                <button onclick="obelisk.next()">Next</button>
-                <script>obelisk = w3.slideshow(".obelisk",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1118,14 +1143,13 @@
     </section>
     <section class="monster fus-pend">
         <div class="img-container">
-            <div class="images">
-                <img class="art arc-ray" src="https://ms.yugipedia.com//7/79/OddEyesArcrayDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art arc-ray" src="https://ms.yugipedia.com//5/5b/OddEyesArcrayDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/79/OddEyesArcrayDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/5b/OddEyesArcrayDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="arc_ray.previous()">Previous</button>
-                <button onclick="arc_ray.next()">Next</button>
-                <script>arc_ray = w3.slideshow(".arc-ray",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1140,14 +1164,13 @@
     </section>
     <section class="monster pendulum">
         <div class="img-container">
-            <div class="images">
-                <img class="art odd-eyes" src="https://ms.yugipedia.com//e/ea/OddEyesPendulumDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art odd-eyes" src="https://ms.yugipedia.com//1/1d/OddEyesPendulumDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/ea/OddEyesPendulumDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/1d/OddEyesPendulumDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="odd_eyes.previous()">Previous</button>
-                <button onclick="odd_eyes.next()">Next</button>
-                <script>odd_eyes = w3.slideshow(".odd-eyes",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1160,14 +1183,13 @@
     </section>
     <section class="monster rit-pend">
         <div class="img-container">
-            <div class="images">
-                <img class="art pendulumgraph" src="https://ms.yugipedia.com//5/54/OddEyesPendulumgraphDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art pendulumgraph" src="https://ms.yugipedia.com//5/54/OddEyesPendulumgraphDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/54/OddEyesPendulumgraphDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/54/OddEyesPendulumgraphDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="pendulumgraph.previous()">Previous</button>
-                <button onclick="pendulumgraph.next()">Next</button>
-                <script>pendulumgraph = w3.slideshow(".pendulumgraph",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1180,14 +1202,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art rainbow" src="https://ms.yugipedia.com//2/2c/RainbowDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art rainbow" src="https://ms.yugipedia.com//0/0c/RainbowDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/2c/RainbowDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/0c/RainbowDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="rainbow.previous()">Previous</button>
-                <button onclick="rainbow.next()">Next</button>
-                <script>rainbow = w3.slideshow(".rainbow",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1200,14 +1221,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art shooting-majestic" src="https://ms.yugipedia.com//3/39/ShootingMajesticStarDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art shooting-majestic" src="https://ms.yugipedia.com//d/de/ShootingMajesticStarDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/39/ShootingMajesticStarDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/de/ShootingMajesticStarDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="shooting_majestic.previous()">Previous</button>
-                <button onclick="shooting_majestic.next()">Next</button>
-                <script>shooting_majestic = w3.slideshow(".shooting-majestic",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1220,14 +1240,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art shooting-quasar" src="https://ms.yugipedia.com//7/7e/ShootingQuasarDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art shooting-quasar" src="https://ms.yugipedia.com//2/25/ShootingQuasarDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/7e/ShootingQuasarDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/25/ShootingQuasarDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="shooting_quasar.previous()">Previous</button>
-                <button onclick="shooting_quasar.next()">Next</button>
-                <script>shooting_quasar = w3.slideshow(".shooting-quasar",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1240,16 +1259,15 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art slifer" src="https://ms.yugipedia.com//b/b8/SlifertheSkyDragon-MADU-EN-VG-artwork.png">
-                <img class="art slifer" src="https://ms.yugipedia.com//5/58/SlifertheSkyDragon-MADU-EN-VG-artwork-2.png">
-                <img class="full-art slifer" src="https://ms.yugipedia.com//6/63/SlifertheSkyDragon-MADU-EN-VG-NC.png">
-                <img class="full-art slifer" src="https://ms.yugipedia.com//8/8e/SlifertheSkyDragon-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b8/SlifertheSkyDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/58/SlifertheSkyDragon-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/63/SlifertheSkyDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/8e/SlifertheSkyDragon-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="slifer.previous()">Previous</button>
-                <button onclick="slifer.next()">Next</button>
-                <script>slifer = w3.slideshow(".slifer",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1261,14 +1279,13 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art vengeance" src="https://ms.yugipedia.com//9/90/SnakeEyesVengeanceDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art vengeance" src="https://ms.yugipedia.com//a/ae/SnakeEyesVengeanceDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/90/SnakeEyesVengeanceDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/ae/SnakeEyesVengeanceDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="vengeance.previous()">Previous</button>
-                <button onclick="vengeance.next()">Next</button>
-                <script>vengeance = w3.slideshow(".vengeance",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1281,16 +1298,15 @@
     </section>
     <section class="monster synchro">
         <div class="img-container">
-            <div class="images">
-                <img class="art stardust" src="https://ms.yugipedia.com//b/b5/StardustDragon-MADU-EN-VG-artwork.png">
-                <img class="art stardust" src="https://ms.yugipedia.com//2/23/StardustDragon-MADU-EN-VG-artwork-2.png">
-                <img class="full-art stardust" src="https://ms.yugipedia.com//3/35/StardustDragon-MADU-EN-VG-NC.png">
-                <img class="full-art stardust" src="https://ms.yugipedia.com//6/64/StardustDragon-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b5/StardustDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/23/StardustDragon-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/35/StardustDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/64/StardustDragon-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="stardust.previous()">Previous</button>
-                <button onclick="stardust.next()">Next</button>
-                <script>stardust = w3.slideshow(".stardust",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1303,14 +1319,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art starve-venom" src="https://ms.yugipedia.com//6/66/StarvingVenomFusionDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art starve-venom" src="https://ms.yugipedia.com//b/b0/StarvingVenomFusionDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/66/StarvingVenomFusionDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b0/StarvingVenomFusionDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="starve_venom.previous()">Previous</button>
-                <button onclick="starve_venom.next()">Next</button>
-                <script>starve_venom = w3.slideshow(".starve-venom",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1323,14 +1338,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art predapower" src="https://ms.yugipedia.com//0/0e/StarvingVenomPredapowerFusionDragon-MADU-EN-VG-artwork.png">
-                <img class="full-art predapower" src="https://ms.yugipedia.com//2/23/StarvingVenomPredapowerFusionDragon-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/0e/StarvingVenomPredapowerFusionDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/23/StarvingVenomPredapowerFusionDragon-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="predapower.previous()">Previous</button>
-                <button onclick="predapower.next()">Next</button>
-                <script>predapower = w3.slideshow(".predapower",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1344,14 +1358,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art typhon" src="https://ms.yugipedia.com//8/8f/SuperStarslayerTYPHONSkyCrisis-MADU-EN-VG-artwork.png">
-                <img class="full-art typhon" src="https://ms.yugipedia.com//d/d8/SuperStarslayerTYPHONSkyCrisis-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/8f/SuperStarslayerTYPHONSkyCrisis-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/d8/SuperStarslayerTYPHONSkyCrisis-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="typhon.previous()">Previous</button>
-                <button onclick="typhon.next()">Next</button>
-                <script>typhon = w3.slideshow(".typhon",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1364,14 +1377,13 @@
     </section>
     <section class="monster fus-pend">
         <div class="img-container">
-            <div class="images">
-                <img class="art zarc" src="https://ms.yugipedia.com//7/79/SupremeKingZARC-MADU-EN-VG-artwork.png">
-                <img class="full-art zarc" src="https://ms.yugipedia.com//4/43/SupremeKingZARC-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/79/SupremeKingZARC-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/43/SupremeKingZARC-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="zarc.previous()">Previous</button>
-                <button onclick="zarc.next()">Next</button>
-                <script>zarc = w3.slideshow(".zarc",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1385,14 +1397,13 @@
     </section>
     <section class="monster link">
         <div class="img-container">
-            <div class="images">
-                <img class="art arrival" src="https://ms.yugipedia.com//e/e0/TheArrivalCyberseIgnister-MADU-EN-VG-artwork.png">
-                <img class="full-art arrival" src="https://ms.yugipedia.com//3/3f/TheArrivalCyberseIgnister-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/e0/TheArrivalCyberseIgnister-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/3f/TheArrivalCyberseIgnister-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="arrival.previous()">Previous</button>
-                <button onclick="arrival.next()">Next</button>
-                <script>arrival = w3.slideshow(".arrival",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1405,14 +1416,13 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art lubellion" src="https://ms.yugipedia.com//1/1a/TheBystialLubellion-MADU-EN-VG-artwork.png">
-                <img class="full-art lubellion" src="https://ms.yugipedia.com//a/ae/TheBystialLubellion-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1a/TheBystialLubellion-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/ae/TheBystialLubellion-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="lubellion.previous()">Previous</button>
-                <button onclick="lubellion.next()">Next</button>
-                <script>lubellion = w3.slideshow(".lubellion",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1424,16 +1434,15 @@
     </section>
     <section class="monster effect">
         <div class="img-container">
-            <div class="images">
-                <img class="art ra" src="https://ms.yugipedia.com//f/ff/TheWingedDragonofRa-MADU-EN-VG-artwork.png">
-                <img class="art ra" src="https://ms.yugipedia.com//e/ed/TheWingedDragonofRa-MADU-EN-VG-artwork-2.png">
-                <img class="full-art ra" src="https://ms.yugipedia.com//5/51/TheWingedDragonofRa-MADU-EN-VG-NC.png">
-                <img class="full-art ra" src="https://ms.yugipedia.com//6/6a/TheWingedDragonofRa-MADU-EN-VG-NC-2.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/ff/TheWingedDragonofRa-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//e/ed/TheWingedDragonofRa-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/51/TheWingedDragonofRa-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/6a/TheWingedDragonofRa-MADU-EN-VG-NC-2.png');"></div>
             </div>
-            <div>
-                <button onclick="ra.previous()">Previous</button>
-                <button onclick="ra.next()">Next</button>
-                <script>ra = w3.slideshow(".ra",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1445,14 +1454,13 @@
     </section>
     <section class="monster xyz">
         <div class="img-container">
-            <div class="images">
-                <img class="art varudras" src="https://ms.yugipedia.com//8/8a/VarudrastheFinalBringeroftheEndTimes-MADU-EN-VG-artwork.png">
-                <img class="full-art varudras" src="https://ms.yugipedia.com//5/5e/VarudrastheFinalBringeroftheEndTimes-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/8a/VarudrastheFinalBringeroftheEndTimes-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/5e/VarudrastheFinalBringeroftheEndTimes-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="varudras.previous()">Previous</button>
-                <button onclick="varudras.next()">Next</button>
-                <script>varudras = w3.slideshow(".varudras",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1465,14 +1473,13 @@
     </section>
     <section class="monster fusion">
         <div class="img-container">
-            <div class="images">
-                <img class="art veidos" src="https://ms.yugipedia.com//3/31/VeidostheDragonofEndlessDarkness-MADU-EN-VG-artwork.png">
-                <img class="full-art veidos" src="https://ms.yugipedia.com//5/56/VeidostheDragonofEndlessDarkness-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/31/VeidostheDragonofEndlessDarkness-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/56/VeidostheDragonofEndlessDarkness-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="veidos.previous()">Previous</button>
-                <button onclick="veidos.next()">Next</button>
-                <script>veidos = w3.slideshow(".veidos",0);</script>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1485,14 +1492,13 @@
     </section>
     <section class="monster link">
         <div class="img-container">
-            <div class="images">
-                <img class="art zealantis" src="https://ms.yugipedia.com//1/1c/WorldseaDragonZealantis-MADU-EN-VG-artwork.png">
-                <img class="full-art zealantis" src="https://ms.yugipedia.com//c/c7/WorldseaDragonZealantis-MADU-EN-VG-NC.png">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1c/WorldseaDragonZealantis-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/c7/WorldseaDragonZealantis-MADU-EN-VG-NC.png');"></div>
             </div>
-            <div>
-                <button onclick="zealantis.previous()">Previous</button>
-                <button onclick="zealantis.next()">Next</button>
-                <script>zealantis = w3.slideshow(".zealantis",0);</script>                
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </div>
         </div>
         <div class="text-container">
@@ -1503,5 +1509,8 @@
             <p>You can only control 1 "Worldsea Dragon Zealantis". You can only use each of the following effects of "Worldsea Dragon Zealantis" once per turn. During your Main Phase: You can banish all monsters on the field, then Special Summon as many monsters as possible that were banished by this effect, to their owners' fields, face-up, or in face-down Defense Position. During the Battle Phase (Quick Effect): You can destroy cards on the field up to the number of co-linked monsters on the field.</p>
         </div>
     </section>
+
+    <script src="anime.min.js"></script>
+    <script src="anime-slideshow.js"></script>
 </body>
 </html>
