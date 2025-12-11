@@ -7,6 +7,10 @@
     <title>Yu-Gi-Oh! Master Duel Artworks & Renders</title>
     <style>
         @font-face {
+            font-family: 'Matrix';
+            src: url(fonts/Matrix.ttf) format('truetype');
+        }
+        @font-face {
             font-family: 'Matrix Regular Small Caps';
             src: url(fonts/Matrix\ Regular\ Small\ Caps.TTF) format('truetype');
         }
@@ -18,18 +22,22 @@
             font-family: 'Matrix Book';
             src: url(fonts/Matrix\ Book.ttf) format('truetype');
         }
-        body{
+        body, h1, h2{
             margin: 0;
         }
         h1, h2{
-            margin: 0;
             font-family: 'Matrix Regular Small Caps', 'Times New Roman', Times, serif;
+
+        }
+        span{
+            font-family: 'Matrix', 'Times New Roman', Times, serif;
         }
         h1{
             font-size: 3rem;
         }
         h2{
             font-size: 2rem;
+
         }
         p{
             font-size: 1rem;
@@ -130,6 +138,47 @@
     <section class="monster link">
         <section class="img-container">
             <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/9a/ABaoAQutheLightlessShadow-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f4/ABaoAQutheLightlessShadow-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </section>
+        <div class="text-container">
+            <h1>A Bao A Qu, the Lightless Shadow</h1>
+            <h2>Link Monster</h2>
+            <h2>Fiend/DARK/Level 8/ATK 2800/LINK-4</h2>
+            <p>2+ monsters, including a Fiend monster</p>
+            <p>During the Main Phase (Quick Effect): You can discard 1 card, then activate 1 of these effects;
+            <br>●Destroy 1 card on the field.
+            <br>●Banish this card (until the End Phase), and if you do, Special Summon 1 LIGHT or DARK monster from your GY.
+            <br>During your Standby Phase: You can draw cards equal to the number of different Monster Types in your GY, then place cards from your hand on the bottom of the Deck in any order, equal to the number of cards you drew. You can only use each effect of "A Bao A Qu, the Lightless Shadow" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/7c/ABCDragonBuster-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/cb/ABCDragonBuster-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>ABC-Dragon Buster</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Machine/LIGHT/Level 8/ATK 3000/DEF 2800</h2>
+            <p>"A-Assault Core" + "B-Buster Drake" + "C-Crush Wyvern"</p>
+            <p>Must first be Special Summoned (from your Extra Deck) by banishing the above cards you control and/or from your GY. (You do not use "Polymerization".) Once per turn (Quick Effect): You can discard 1 card, then target 1 card on the field; banish it. During your opponent's turn (Quick Effect): You can Tribute this card, then target 3 of your banished LIGHT Machine Union monsters with different names; Special Summon them.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <section class="img-container">
+            <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/6f/AccesscodeTalker-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f3/AccesscodeTalker-MADU-EN-VG-artwork-2.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/fb/AccesscodeTalker-MADU-EN-VG-NC.png');"></div>
@@ -205,7 +254,26 @@
             <p>Cannot be used as Fusion Material. Your opponent cannot target this card with card effects. You can only use each of the following effects of "Albion the Sanctifire Dragon" once per turn. During your opponent's turn (Quick Effect): You can target 2 monsters in any GY(s); Special Summon both monsters, 1 to each field. If this card is in your GY: You can Tribute 4 monsters, the 2 in the Extra Monster Zones and the 2 in the central Main Monster Zones, and if you do, Special Summon this card.</p>
         </div>
     </section>
-        <section class="monster ritual">
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/2c/AleistertheInvoker-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/9b/AleistertheInvoker-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/27/AleistertheInvoker-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Aleister the Invoker</h1>
+            <h2>Effect Monster</h2>
+            <h2>Spellcaster/DARK/Level 4/ATK 1000/DEF 1800</h2>
+            <p>(Quick Effect): You can send this card from your hand to the GY, then target 1 Fusion Monster you control; it gains 1000 ATK/DEF until the end of this turn. If this card is Normal Summoned or flipped face-up: You can add 1 "Invocation" from your Deck to your hand.</p>
+        </div>
+    </section>
+    <section class="monster ritual">
         <div class="img-container">
             <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/5e/AmenoMurakumonoMitsurugi-MADU-EN-VG-artwork.png');"></div>
@@ -233,6 +301,7 @@
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
             </div>
+        </div>
         <div class="text-container">
             <h1>Antihuman Intelligence ME-PSY-YA</h1>
             <h2>Pendulum Monster</h2>
@@ -295,6 +364,28 @@
             <h2>Ritual Monster</h2>
             <h2>Warrior/EARTH/Level 8/ATK 3000/DEF 2500</h2>
             <p>You can Ritual Summon this card with "Chaos Form" or "Super Soldier Ritual". Must be Ritual Summoned. During your Draw Phase, before you draw: You can reveal this card in your hand; give up your normal draw this turn, and if you do, add 1 Ritual Spell from your Deck to your hand. Your opponent cannot activate cards or effects during your Battle Phase. When this attacking card, that was Ritual Summoned using a Normal Monster, destroys an opponent's monster by battle: You can shuffle all cards your opponent controls into the Deck.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <section class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/ca/BlackLusterSoldierSoldierofChaos-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/df/BlackLusterSoldierSoldierofChaos-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </section>
+        <div class="text-container">
+            <h1>Black Luster Soldier - Soldier of Chaos</h1>
+            <h2>Link Monster</h2>
+            <h2>Warrior/EARTH/↙↑↘/ATK 3000/LINK-3</h2>
+            <p>3 monsters with different names</p>
+            <p>If this card was Link Summoned using a Level 7 or higher monster(s) as material, your opponent cannot target it with card effects, also it cannot be destroyed by your opponent's card effects. When this card destroys an opponent's monster by battle: You can activate 1 of these effects;
+            <br>●This card gains 1500 ATK.
+            <br>●This card can make a second attack during the Battle Phase of your next turn.
+            <br>●Banish 1 card on the field.</p>
         </div>
     </section>
     <section class="monster synchro">
@@ -372,7 +463,7 @@
             <h2>Ritual Monster</h2>
             <h2>Dragon/DARK/Level 8/ATK 4000/DEF 0</h2>
             <p>You can Ritual Summon this card with "Chaos Form". Must be Ritual Summoned. Your opponent cannot target this card with card effects, also it cannot be destroyed by your opponent's card effects. If this card attacks a Defense Position monster, inflict double piercing battle damage to your opponent.</p>
-    </div>
+        </div>
     </section>
     <section class="monster synchro">
         <div class="img-container">
@@ -413,7 +504,45 @@
             <p class="flav">This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.</p>
         </div>
     </section>
-        <section class="monster synchro">
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/67/BorreloadSavageDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f1/BorreloadSavageDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Borreload Savage Dragon</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Dragon/DARK/Level 8/ATK 3000/DEF 2500</h2>
+            <p>1 Tuner + 1+ non-Tuner monsters</p>
+            <p>If this card is Synchro Summoned: You can equip 1 Link Monster from your GY to this card, and if you do, place Borrel Counters on this card equal to that Link Monster's Link Rating. This card gains ATK equal to half the ATK of the monster equipped to it by its effect. When your opponent activates a card or effect (Quick Effect): You can remove 1 Borrel Counter from this card; negate the activation. You can only use this effect of "Borreload Savage Dragon" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/66/BorrelswordDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/2b/BorrelswordDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Borrelsword Dragon</h1>
+            <h2>Link Monster</h2>
+            <h2>Cyberse/DARK/↙←↑↓/ATK 3000/LINK-4</h2>
+            <p>3+ Effect Monsters</p>
+            <p>Cannot be destroyed by battle. Once per turn (Quick Effect): You can target 1 Attack Position monster; change it to Defense Position, also, this card can make a second attack during each Battle Phase this turn. Your opponent cannot activate cards or effects in response to this effect's activation. Once per turn, when this card declares an attack on a face-up monster: You can activate this effect; until the end of this turn, this card gains ATK equal to half that monster's current ATK, and if it does, that monster's current ATK is halved.</p>
+        </div>
+    </section>
+    <section class="monster synchro">
         <div class="img-container">
             <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/fd/ClearWingSynchroDragon-MADU-EN-VG-artwork.png');"></div>
@@ -450,7 +579,10 @@
             <h2>Synchro Monster</h2>
             <h2>Dragon/WIND/Level 12/ATK 4000/DEF 4000</h2>
             <p>1 Tuner Synchro Monster + 2+ non-Tuner Synchro Monsters</p>
-            <p>Must be Synchro Summoned. (Quick Effect): You can banish this card until the End Phase to activate 1 of these effects; <br>●When your opponent activates a card or effect: Negate the activation, and if you do, destroy that card. <br>●When your opponent would Summon a monster(s): Negate the Summon, and if you do, destroy that monster(s). <br>●When an opponent's monster declares an attack: Negate the attack, then end the Battle Phase.</p>
+            <p>Must be Synchro Summoned. (Quick Effect): You can banish this card until the End Phase to activate 1 of these effects;
+            <br>●When your opponent activates a card or effect: Negate the activation, and if you do, destroy that card.
+            <br>●When your opponent would Summon a monster(s): Negate the Summon, and if you do, destroy that monster(s).
+            <br>●When an opponent's monster declares an attack: Negate the attack, then end the Battle Phase.</p>
         </div>
     </section>
         <section class="monster synchro">
@@ -508,6 +640,25 @@
             <h2>Dragon/LIGHT/Level 12/ATK 0/DEF 0</h2>
             <p>1 Tuner + 1+ non-Tuner monsters</p>
             <p>If this card is Special Summoned: You can add 1 Spell/Trap that mentions "Crimson Dragon" from your Deck to your hand. (Quick Effect): You can target 1 Level 7 or higher Synchro Monster on the field, except "Crimson Dragon"; return this card to the Extra Deck, and if you do, Special Summon 1 Dragon Synchro Monster from your Extra Deck with the same Level as the targeted monster. (This is treated as a Synchro Summon.) You can only use each effect of "Crimson Dragon" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/6a/CXyzGimmickPuppetFanatixMachinix-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/fb/CXyzGimmickPuppetFanatixMachinix-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>CXyz Gimmick Puppet Fanatix Machinix</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Machine/DARK/Rank 9/ATK 3100/DEF 1500</h2>
+            <p>3 Level 9 monsters</p>
+            <p>If this card is Special Summoned: You can add 1 "Puppet" Trap from your Deck to your hand. You can detach 1 material from this card; Special Summon 1 monster from either GY to your opponent's field in Defense Position. If a monster(s) is Special Summoned to your opponent's field (except during the Damage Step): You can target 1 of them; destroy it, and if you do, inflict damage to your opponent equal to half its original ATK. You can only use each effect of "CXyz Gimmick Puppet Fanatix Machinix" once per turn.</p>
         </div>
     </section>
     <section class="monster fusion">
@@ -587,7 +738,7 @@
             <p>You can also Xyz Summon this card by using a "D/D/D" monster you control (transfer its materials to this card). You can only control 1 "D/D/D Deviser King Deus Machinex" in your Monster Zone. Once per Chain, when a Monster Card your opponent controls activates its effect (Quick Effect): You can either detach 2 materials from this card, or destroy 1 "Dark Contract" card you control, and if you do, attach that opponent's card to this card. Once per turn, during your Standby Phase: You can place this card in your Pendulum Zone.</p>
         </div>
     </section>
-        <section class="monster normal">
+    <section class="monster normal">
         <div class="img-container">
             <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/53/DarkMagician-MADU-EN-VG-artwork.png');"></div>
@@ -647,7 +798,7 @@
     <section class="monster link">
         <div class="img-container">
             <div class="slideshow">
-                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/15/DecodeTalker-MADU-EN-VG-artwork.png');">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/15/DecodeTalker-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//5/52/DecodeTalker-MADU-EN-VG-NC.png');"></div>
             </div>
             <div class="controls">
@@ -661,6 +812,45 @@
             <h2>Cyberse/DARK/↙↑↘/ATK 2300/LINK-3</h2>
             <p>2+ Effect Monsters</p>
             <p>Gains 500 ATK for each monster it points to. When your opponent activates a card or effect that targets a card(s) you control (Quick Effect): You can Tribute 1 monster this card points to; negate the activation, and if you do, destroy that card.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/fa/DecodeTalkerHeatsoul-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/d6/DecodeTalkerHeatsoul-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Decode Talker Heatsoul</h1>
+            <h2>Link Monster</h2>
+            <h2>Cyberse/DARK/↙↑↘/ATK 2300/LINK-3</h2>
+            <p>2+ Cyberse monsters with different Attributes</p>
+            <p>Gains 500 ATK for each monster it points to. (Quick Effect): You can pay 1000 LP; draw 1 card, then if your LP are 2000 or less, you can apply this effect.
+            <br>●Banish this card from the field, and if you do, Special Summon 1 Link-3 or lower Cyberse monster from your Extra Deck, except "Decode Talker Heatsoul". <br>You can only use this effect of "Decode Talker Heatsoul" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/c6/DestinyHERODestroyerPhoenixEnforcer-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/90/DestinyHERODestroyerPhoenixEnforcer-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Destiny HERO - Destroyer Phoenix Enforcer</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Warrior/DARK/Level 8/ATK 2500/DEF 2100</h2>
+            <p>1 Level 6 or higher "HERO" monster + 1 "Destiny HERO" monster</p>
+            <p>Monsters your opponent controls lose 200 ATK for each "HERO" card in your GY. You can only use each of the following effects of "Destiny HERO - Destroyer Phoenix Enforcer" once per turn. (Quick Effect): You can destroy both 1 card you control and 1 card on the field. If this card is destroyed by battle or card effect: You can activate this effect; Special Summon 1 "Destiny HERO" monster from your GY during the Standby Phase of the next turn.</p>
         </div>
     </section>
     <section class="monster synchro">
@@ -720,7 +910,26 @@
             <p>If a "Sinful Spoils" card is in either player's GY, you can Special Summon this card (from your hand). You can only Special Summon "Diabellze the Original Sinkeeper" once per turn this way. Your opponent must Set Spell/Trap Cards before activating them. If a Spell/Trap becomes Set on the field, while this card is in the Monster Zone (except during the Damage Step): You can target 1 card you control and 1 card your opponent controls; destroy them. You can only use this effect of "Diabellze the Original Sinkeeper" once per turn.</p>
         </div>
     </section>
-        <section class="monster effect">
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b1/DinomorphiaKentregina-MADU-JP-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/ce/DinomorphiaKentregina-MADU-JP-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Dinomorphia Kentregina</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Dinosaur/DARK/Level 6/ATK 4000/DEF 0</h2>
+            <p>2 "Dinomorphia" monsters with different names</p>
+            <p>Loses ATK equal to your LP. You can only use each of the following effects of "Dinomorphia Kentregina" once per turn. During the Main Phase (Quick Effect): You can pay half your LP and banish 1 "Dinomorphia" Normal Trap from your GY; this effect becomes that Trap's effect when that card is activated. If this card is destroyed by battle or card effect: You can Special Summon 1 Level 4 or lower "Dinomorphia" monster from your GY.</p>
+        </div>
+    </section>
+    <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/c1/DogmatikaFleurdelistheKnighted-MADU-EN-VG-artwork.png');"></div>
@@ -776,10 +985,10 @@
             <p>Once per turn, if an Xyz Monster battled this turn, you can also Xyz Summon "Divine Arsenal AA-ZEUS - Sky Thunder" by using 1 Xyz Monster you control as material. (Transfer its materials to this card.) (Quick Effect): You can detach 2 materials from this card; send all other cards from the field to the GY. Once per turn, if another card(s) you control is destroyed by battle or an opponent's card effect: You can attach 1 card from your hand, Deck, or Extra Deck to this card as material.</p>
         </div>
     </section>
-        <section class="monster fusion">
+    <section class="monster fusion">
         <div class="img-container">
             <div class="slideshow">
-                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/30/DragonMasterMagia-MADU-EN-VG-artwork.png');">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/30/DragonMasterMagia-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/8d/DragonMasterMagia-MADU-EN-VG-NC.png');"></div>
             </div>
             <div class="controls">
@@ -793,6 +1002,62 @@
             <h2>Dragon/LIGHT/Level 12/ATK 5000/DEF 4000</h2>
             <p>"Blue-Eyes Ultimate Dragon" or 3 "Blue-Eyes" monsters + 1 "Chaos" or "Black Luster Soldier" Ritual Monster</p>
             <p>Must be Fusion Summoned. When your opponent activates a card or effect (Quick Effect): You can negate the activation, and if you do, destroy that card. You can only use this effect of "Dragon Master Magia" in response to each card type (Monster, Spell, or Trap) once per turn. If this face-up card in its owner's control leaves the field because of an opponent's card: You can Special Summon 1 "Blue-Eyes" monster or 1 "Chaos" or "Black Luster Soldier" Ritual Monster from your Extra Deck or GY.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/79/DragonmaidSheou-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/d9/DragonmaidSheou-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Dragonmaid Sheou</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Dragon/LIGHT/Level 10/ATK 3500/DEF 2000</h2>
+            <p>1 "Dragonmaid" monster + 1 Level 5 or higher Dragon monster</p>
+            <p>During each Standby Phase: You can Special Summon 1 Level 9 or lower "Dragonmaid" monster from your hand or GY. When your opponent activates a card or effect (Quick Effect): You can negate the activation, and if you do, destroy that card, also, after that, return this card to the Extra Deck, and if you do, Special Summon 1 "House Dragonmaid" from your Extra Deck. You can only use each effect of "Dragonmaid Sheou" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster ritual">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/08/DrytronMeteonisDraconids-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/8d/DrytronMeteonisDraconids-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Drytron Meteonis Draconids</h1>
+            <h2>Ritual Monster</h2>
+            <h2>Machine/LIGHT/Level 12/ATK 4000/DEF 4000</h2>
+            <p>You can Ritual Summon this card with "Meteonis Drytron". Your opponent cannot target this card with monster effects. If the total Levels of monsters used for its Ritual Summon are 2 or less, this card can attack all Special Summoned monsters your opponent controls once each. During your opponent's turn (Quick Effect): You can banish monsters from your GY whose combined ATK equals exactly 2000 or 4000, then target 1 face-up card your opponent controls for every 2000 ATK of the total; send that card(s) to the GY. You can only use this effect of "Drytron Meteonis Draconids" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/a7/ElementalHEROFlameWingman-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b2/ElementalHEROFlameWingman-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Elemental HERO Flame Wingman</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Warrior/WIND/Level 6/ATK 2100/DEF 1200</h2>
+            <p>"Elemental HERO Avian" + "Elemental HERO Burstinatrix"</p>
+            <p>Must be Fusion Summoned. When this card destroys a monster by battle and sends it to the GY: Inflict damage to your opponent equal to the ATK of the destroyed monster in the GY.</p>
         </div>
     </section>
     <section class="monster normal">
@@ -814,10 +1079,184 @@
             <p class="flav">A new Elemental HERO has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian his unknown powers are unleashed.</p>
         </div>
     </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/2f/ElementalHEROShiningNeosWingman-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/26/ElementalHEROShiningNeosWingman-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Elemental HERO Shining Neos Wingman</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Warrior/LIGHT/Level 8/ATK 3100/DEF 1500</h2>
+            <p>"Elemental HERO Neos" + 1 "Wingman" Fusion Monster</p>
+            <p>Must be Fusion Summoned. Gains 300 ATK for each monster in your GY, also cannot be destroyed by card effects. If this card is Special Summoned: You can destroy cards your opponent controls up to the number of different Attributes among the monsters on the field. You can only use this effect of "Elemental HERO Shining Neos Wingman" once per turn. If this card destroys a monster by battle: Inflict damage to your opponent equal to that monster's original ATK.</p>
+        </div>
+    </section>
+    <section class="monster pendulum">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/6a/EndymiontheMightyMasterofMagic-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/33/EndymiontheMightyMasterofMagic-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Endymion the Mighty Master of Magic</h1>
+            <h2>Pendulum Monster</h2>
+            <h2>Spellcaster/DARK/PS8/Level 7/ATK 2800/DEF 1700</h2>
+            <p class="pend-effect">You can remove 6 Spell Counters from your field; Special Summon this card from the Pendulum Zone, then count the number of cards you control that can have a Spell Counter, destroy up to that many cards on the field, and if you do, place Spell Counters on this card equal to the number of cards destroyed. You can only use this effect of "Endymion, the Mighty Master of Magic" once per turn.</p>
+            <p>Once per turn, when a Spell/Trap Card or effect is activated (Quick Effect): You can return 1 card you control with a Spell Counter to the hand, and if you do, negate the activation, and if you do that, destroy it. Then, you can place the same number of Spell Counters on this card that the returned card had. While this card has a Spell Counter, your opponent cannot target it with card effects, also it cannot be destroyed by your opponent's card effects. When this card with a Spell Counter is destroyed by battle: You can add 1 Normal Spell from your Deck to your hand.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <section class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/6d/EvilTwinKisikil-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/cd/EvilTwinKisikil-MADU-JP-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/4b/EvilTwinKisikil-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/4a/EvilTwinKisikil-MADU-JP-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </section>
+        <div class="text-container">
+            <h1>Evil★Twin Ki-sikil</h1>
+            <h2>Link Monster</h2>
+            <h2>Fiend/DARK/→↓/ATK 1100/LINK-2</h2>
+            <p>2 monsters, including a "Ki-sikil" monster</p>
+            <p>If this card is Special Summoned and you control a "Lil-la" monster: You can draw 1 card. During the Main Phase, if you do not control a "Lil-la" monster (Quick Effect): You can Special Summon 1 "Lil-la" monster from your GY, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fiend monsters. You can only use each effect of "Evil★Twin Ki-sikil" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <section class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/73/EvilTwinLilla-MADU-JP-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/22/EvilTwinLilla-MADU-JP-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/a6/EvilTwinLilla-MADU-JP-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/fb/EvilTwinLilla-MADU-JP-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </section>
+        <div class="text-container">
+            <h1>Evil★Twin Lil-la</h1>
+            <h2>Link Monster</h2>
+            <h2>Fiend/DARK/←↓/ATK 1100/LINK-2</h2>
+            <p>2 monsters, including a "Lil-la" monster</p>
+            <p>If this card is Special Summoned and you control a "Ki-sikil" monster: You can target 1 card on the field; destroy it. During the Main Phase, if you do not control a "Ki-sikil" monster (Quick Effect): You can Special Summon 1 "Ki-sikil" monster from your GY, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fiend monsters. You can only use each effect of "Evil★Twin Lil-la" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/12/EvilTwinsKisikilLilla-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/c2/EvilTwinsKisikilLilla-MADU-JP-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Evil★Twins Ki-sikil & Lil-la</h1>
+            <h2>Effect Monster</h2>
+            <h2>Fiend/DARK/Level 8/ATK 2200/DEF 2200</h2>
+            <p>Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand or GY) by Tributing 2 Link Monsters. If this card is Special Summoned: You can activate this effect; if your opponent controls 3 or more cards, they must send cards to the GY so they control 2 cards. You can only use this effect of "Evil★Twins Ki-sikil & Lil-la" once per turn. While you have a "Ki-sikil" monster in your GY and you have a "Lil-la" monster in your GY, this card gains 2200 ATK/DEF.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <section class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/18/EvilTwinsTroubleSunny-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/31/EvilTwinsTroubleSunny-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </section>
+        <div class="text-container">
+            <h1>Evil★Twin's Trouble Sunny</h1>
+            <h2>Link Monster</h2>
+            <h2>Fiend/DARK/←↑→↓/ATK 3300/LINK-4</h2>
+            <p>2+ monsters, including a "Evil★Twin" monster</p>
+            <p>(Quick Effect): You can Tribute this card; Special Summon up to 1 "Ki-sikil" monster and up to 1 "Lil-la" monster from your GY. You can banish this card from your GY and send 1 "Evil★Twin" monster from your hand, Deck, or face-up field to the GY; send 1 card on the field to the GY. You can only use each effect of "Evil★Twin's Trouble Sunny" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/05/EvilHERONeosLord-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//c/c0/EvilHERONeosLord-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Evil HERO Neos Lord</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Fiend/DARK/Level 10/ATK 2500/DEF 2000</h2>
+            <p>"Elemental HERO Neos" (or 1 Fusion Monster that mentions it) + 1 Effect Monster on the field</p>
+            <p>Must be Special Summoned with "Dark Fusion". Cannot be destroyed by battle or card effects. If this card is Special Summoned, or a monster(s) is sent to your opponent's GY while this card is on the field: You can target 1 face-up monster your opponent controls; take control of it. You can only use this effect of "Evil HERO Neos Lord" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/3e/FallenofAlbaz-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f9/FallenofAlbaz-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/64/FallenofAlbaz-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Fallen of Albaz</h1>
+            <h2>Effect Monster</h2>
+            <h2>Dragon/DARK/Level 4/ATK 1800/DEF 0</h2>
+            <p>If this card is Normal or Special Summoned (except during the Damage Step): You can discard 1 card; Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters on either field as Fusion Material, including this card, but you cannot use other monsters you control as Fusion Material. You can only use this effect of "Fallen of Albaz" once per turn.</p>
+        </div>
+    </section>
     <section class="monster link">
         <div class="img-container">
             <div class="slideshow">
-                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/0d/FirewallDragonSingularity-MADU-EN-VG-artwork.png');">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/de/FirewallDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f6/FirewallDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Firewall Dragon</h1>
+            <h2>Link Monster</h2>
+            <h2>Cyberse/DARK/←↑→↓/ATK 2500/LINK-4</h2>
+            <p>2+ monsters</p>
+            <p>Once while face-up on the field (Quick Effect): You can target monsters on the field and/or GY up to the number of monsters co-linked to this card; return them to the hand. If a monster this card points to is destroyed by battle or sent to the GY: You can Special Summon 1 Cyberse monster from your hand. You can only use each effect of "Firewall Dragon" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/0d/FirewallDragonSingularity-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/65/FirewallDragonSingularity-MADU-EN-VG-NC.png');"></div>
             </div>
             <div class="controls">
@@ -836,8 +1275,8 @@
     <section class="monster link">
         <div class="img-container">
             <div class="slideshow">
-                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/de/FirewallDragon-MADU-EN-VG-artwork.png');">
-                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f6/FirewallDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/61/GaiaSabertheLightningShadow-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b2/GaiaSabertheLightningShadow-MADU-EN-VG-NC.png');"></div>
             </div>
             <div class="controls">
                 <button class="prevBtn">Previous</button>
@@ -845,18 +1284,36 @@
             </div>
         </div>
         <div class="text-container">
-            <h1>Firewall Dragon</h1>
+            <h1>Gaia Saber, the Lightning Shadow</h1>
             <h2>Link Monster</h2>
-            <h2>Cyberse/DARK/←↑→↓/ATK 2500/LINK-4</h2>
+            <h2>Machine/EARTH/←→↓/ATK 2600/LINK-3</h2>
             <p>2+ monsters</p>
-            <p>Once while face-up on the field (Quick Effect): You can target monsters on the field and/or GY up to the number of monsters co-linked to this card; return them to the hand. If a monster this card points to is destroyed by battle or sent to the GY: You can Special Summon 1 Cyberse monster from your hand. You can only use each effect of "Firewall Dragon" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/ab/GalaxyEyesCipherXDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slides" style="background-image: url('https://ms.yugipedia.com//8/85/GalaxyEyesCipherXDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Galaxy-Eyes Cipher X Dragon</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Dragon/LIGHT/Rank 10/ATK 4000/DEF 3000</h2>
+            <p>2 Level 10 monsters</p>
+            <p>Once per turn, you can also Xyz Summon "Galaxy-Eyes Cipher X Dragon" by using a "Cipher Dragon" monster you control as material. (Transfer its materials to this card.) You can detach 2 materials from this card; your opponent cannot target LIGHT monsters you control with card effects, until the end of your opponent's turn. Once per turn, during your Standby Phase: You can return 1 Rank 9 or lower Dragon Xyz Monster from your GY to the Extra Deck, then you can Special Summon that monster from your Extra Deck, by using this card you control as material. (This is treated as an Xyz Summon. Transfer this card's materials to the Summoned monster.)</p>
         </div>
     </section>
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/aa/GalaxyEyesPhotonDragon-MADU-EN-VG-artwork.png');"></div>
-                <div class="slide" style="background-image: url('https://slideshow-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/df3pbv8-789b0445-c5a4-4129-aabf-5c16c62978ec.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGYzcGJ2OC03ODliMDQ0NS1jNWE0LTQxMjktYWFiZi01YzE2YzYyOTc4ZWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Hoc_aBvl80UfjUMENLHAgZCelXVbskTljqyNfwP61o4');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/4c/GalaxyEyesPhotonDragon-MADU-EN-VG-NC.png');"></div>
             </div>
             <div class="controls">
                 <button class="prevBtn">Previous</button>
@@ -868,6 +1325,44 @@
             <h2>Effect Monster</h2>
             <h2>Dragon/LIGHT/Level 8/ATK 3000/DEF 2500</h2>
             <p>You can Special Summon this card (from your hand) by Tributing 2 monsters with 2000 or more ATK. During the Battle Step, if this card battles an opponent's monster (Quick Effect): You can target that opponent's monster; banish both this card from the field and that target. Return those banished monsters to the field at the end of the Battle Phase, and if you banished an Xyz Monster, this card gains 500 ATK for each material it had when it was banished.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/e3/GemKnightMasterDiamond-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/fa/GemKnightMasterDiamond-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Gem-Knight Master Diamond</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Rock/EARTH/Level 9/ATK 2900/DEF 2500</h2>
+            <p>3 "Gem-Knight" monsters</p>
+            <p>Must first be Fusion Summoned. Gains 100 ATK for each "Gem-" monster in your GY. Once per turn: You can banish 1 Level 7 or lower "Gem-Knight" Fusion Monster from your GY; until the End Phase, this card's name becomes that monster's original name, also replace this effect with that monster's original effects.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/bb/GimmickPuppetFantasixMachinix-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/13/GimmickPuppetFantasixMachinix-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Gimmick Puppet Fantasix Machinix</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Machine/DARK/Rank 8/ATK 1500/DEF 3100</h2>
+            <p>2 Level 8 monsters</p>
+            <p>You can detach 1 material from this card; add 1 "Rank-Up-Magic" Spell from your Deck to your hand, also, you can Normal Summon 1 Machine monster during your Main Phase this turn, in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) If you Special Summon a "Gimmick Puppet" Xyz Monster(s) (except during the Damage Step): You can Special Summon this card from your GY to either field in Defense Position, then you can add 1 "Rank-Up-Magic" Spell from your GY to your hand. You can only use each effect of "Gimmick Puppet Fantasix Machinix" once per turn.</p>
         </div>
     </section>
     <section class="monster fusion">
@@ -889,6 +1384,43 @@
             <p>When your opponent activates a monster effect, or a Normal Spell/Trap Card, while you have a card(s) in your hand (Quick Effect): You can activate this effect; the activated effect becomes "Your opponent discards 1 card". You can only use this effect of "Grapha, Dragon Overlord of Dark World" once per turn. If this Fusion Summoned card in its owner's control leaves the field because of an opponent's card: You can Special Summon 1 of your "Grapha, Dragon Lord of Dark World" that is banished or in your GY, then each player with a hand discards 1 card.</p>
         </div>
     </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1c/GuardianChimera-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/04/GuardianChimera-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Guardian Chimera</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Beast/DARK/Level 9/ATK 3300/DEF 3000</h2>
+            <p>3 monsters with different names</p>
+            <p>Must first be Fusion Summoned using only Fusion Materials from your hand and field, with at least 1 monster from each. If this card is Fusion Summoned by a Spell Card or effect: You can draw cards equal to the number of cards used as material from the hand, and if you do, destroy cards your opponent controls equal to the number of cards used as material from the field. You can only use this effect of "Guardian Chimera" once per turn. While "Polymerization" is in your GY, your opponent cannot target this card with card effects.</p>
+        </div>
+    </section>
+    <section class="monster ritual">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/36/HeraldofUltimateness-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/6d/HeraldofUltimateness-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Herald of Ultimateness</h1>
+            <h2>Ritual Monster</h2>
+            <h2>Fairy/LIGHT/Level 12/ATK 2000/DEF 3000</h2>
+            <p>You can Ritual Summon this card with "Oracle of the Herald". Must be Ritual Summoned. When your opponent would Special Summon a monster(s), OR activates a Spell/Trap Card, or a monster effect (Quick Effect): You can send 1 Fairy monster from your hand to the GY; negate the Special Summon or activation, and if you do, destroy that card.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
@@ -905,6 +1437,149 @@
             <h2>Effect Monster</h2>
             <h2>Dragon/FIRE/Level 8/ATK 3000/DEF 1800</h2>
             <p>If you control a "Horus" monster and "King's Sarcophagus": You can reveal this card in your hand, then send 1 card from your hand or field to the GY; send 1 card on the field to the GY. If a face-up "Horus" monster(s) you control, except "Horus the Black Flame Deity", or a face-up "King's Sarcophagus" you control, leaves the field by an opponent's card effect (except during the Damage Step): You can Special Summon this card from your hand, then you can send all other monsters on the field to the GY. You can only use each effect of "Horus the Black Flame Deity" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/37/HouseDragonmaid-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/9c/HouseDragonmaid-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/74/HouseDragonmaid-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/84/HouseDragonmaid-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>House Dragonmaid</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Dragon/LIGHT/Level 9/ATK 3000/DEF 2000</h2>
+            <p>1 "Dragonmaid" monster + 1 Dragon monster</p>
+            <p>Once per turn, during the Standby Phase: You can target 1 other "Dragonmaid" monster you control; Special Summon 1 "Dragonmaid" monster from your hand or GY in Defense Position, whose Level is 1 higher or 1 lower than it. When another face-up Dragon monster(s) you control returns to your hand (except during the Damage Step): You can target 1 monster your opponent controls; destroy it.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/a7/IncredibleEcclesiatheVirtuous-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/23/IncredibleEcclesiatheVirtuous-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//e/e8/IncredibleEcclesiatheVirtuous-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Incredible Ecclesia, the Virtuous</h1>
+            <h2>Effect Monster</h2>
+            <h2>Spellcaster/Tuner/LIGHT/Level 4/ATK 1500/DEF 1500</h2>
+            <p>If your opponent controls more monsters than you do, you can Special Summon this card (from your hand). You can only Special Summon "Incredible Ecclesia, the Virtuous" once per turn this way. You can only use each of the following effects of "Incredible Ecclesia, the Virtuous" once per turn. During the Main Phase (Quick Effect): You can Tribute this card; Special Summon 1 "Swordsoul" monster or 1 "Fallen of Albaz" from your hand or Deck. During the End Phase, if a Fusion Monster(s) was sent to your GY this turn: Add this card from the GY to your hand.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/00/InfernoidFlood-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/dibzriw-012e695f-dbdf-4cbe-924e-5fdfdfed8f8f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGlienJpdy0wMTJlNjk1Zi1kYmRmLTRjYmUtOTI0ZS01ZmRmZGZlZDhmOGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dq-08wugD26lRRzIztO2T8v2J4m7KIN6y-BA5dcLoIw');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Infernoid Flood</h1>
+            <h2>Link Monster</h2>
+            <h2>Fiend/FIRE/↙↑↘↓/ATK 3000/LINK-4</h2>
+            <p>2+ monsters, including an "Infernoid" monster</p>
+            <p>When your opponent would Special Summon a monster(s) (Quick Effect): You can Tribute 1 monster; negate the Summon, and if you do, banish that monster(s). If a card(s) is banished from your GY (except during the Damage Step): You can banish 1 card on the field. If this Link Summoned card in its owner's control is destroyed by an opponent's card: You can Special Summon 1 "Infernoid" monster from your Deck, ignoring its Summoning conditions. You can only use each effect of "Infernoid Flood" once per turn.When your opponent would Special Summon a monster(s) (Quick Effect): You can Tribute 1 monster; negate the Summon, and if you do, banish that monster(s). If a card(s) is banished from your GY (except during the Damage Step): You can banish 1 card on the field. If this Link Summoned card in its owner's control is destroyed by an opponent's card: You can Special Summon 1 "Infernoid" monster from your Deck, ignoring its Summoning conditions. You can only use each effect of "Infernoid Flood" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/21/InfernoidTierra-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/37/InfernoidTierra-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Infernoid Tierra</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Fiend/FIRE/Level 11/ATK 3400/DEF 3600</h2>
+            <p>"Infernoid Onuncu" + "Infernoid Devyaty" + 1+ "Infernoid" monsters</p>
+            <p>When this card is Fusion Summoned, you can: Apply these effects, in sequence, based on the number of materials with different names used for this card's Summon;
+            <br>●3+: Each player sends 3 cards from their Extra Deck to the GY.
+            <br>●5+: Each player sends the top 3 cards from their Deck to the GY.
+            <br>●8+: Each player returns up to 3 of their banished cards to the GY.
+            <br>●10+: Each player sends their entire hand to the GY.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b4/InvokedMagistusOmega-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/0a/InvokedMagistusOmega-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Invoked Magistus Omega</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Beast/DARK/Level 8/ATK 2800/DEF 2000</h2>
+            <p>"Aleister the Invoker" + 1 Fusion, Synchro, Xyz, or Link Monster</p>
+            <p>If this card is Special Summoned: You can target 1 Fusion, Synchro, Xyz, or Link Monster in your GY and 1 monster on the field; banish them. If this Fusion Summoned card is destroyed by battle or card effect: You can Special Summon 1 Level 4 Spellcaster monster from your Deck, then you can equip this card to it as an Equip Spell that gives it 1000 ATK. You can only use each effect of "Invoked Magistus Omega" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/05/InvokedMechaba-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/0e/InvokedMechaba-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/00/InvokedMechaba-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/68/InvokedMechaba-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Invoked Mechaba</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Machine/LIGHT/Level 9/ATK 2500/DEF 2100</h2>
+            <p>"Aleister the Invoker" + 1 LIGHT monster</p>
+            <p>Once per turn, when a Spell/Trap Card, or monster effect, is activated (Quick Effect): You can send the same type of card (Monster, Spell, or Trap) from your hand to the GY; negate the activation, and if you do, banish that card.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b0/IPMasquerena-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/81/IPMasquerena-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/79/IPMasquerena-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//6/68/IPMasquerena-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>I:P Masquerena</h1>
+            <h2>Link Monster</h2>
+            <h2>Cyberse/DARK/↙↘/ATK 800/LINK-2</h2>
+            <p>2 non-Link monsters</p>
+            <p>During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Link Summon 1 Link Monster using materials you control, including this card. You can only use this effect of "I:P Masquerena" once per turn. A Link Monster that used this card as material cannot be destroyed by your opponent's card effects.</p>
         </div>
     </section>
     <section class="monster synchro">
@@ -928,6 +1603,43 @@
             <p>If this card is Synchro Summoned: It gains ATK equal to the total ATK of all Level 2 or lower monsters you currently control.</p>
         </div>
     </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/d1/KashtiraAriseHeart-MADU-EN-VG-artwork.png');"></div>
+                <div class="slides" style="background-image: url('https://ms.yugipedia.com//4/4e/KashtiraAriseHeart-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Kashtira Arise-Heart</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Machine/DARK/Rank 7/ATK 3000/DEF 3000</h2>
+            <p>3 Level 7 monsters</p>
+            <p>Once per turn, you can also Xyz Summon "Kashtira Arise-Heart" by using 1 "Kashtira" monster you control, if an effect of "Kashtira Shangri-Ira" was successfully activated this turn. (Transfer its materials to this card.) Any card sent to the GY is banished instead. Once per Chain, each time a card(s) is banished: Attach 1 banished card to this card as material. Once per turn (Quick Effect): You can detach 3 materials from this card, then target 1 card on the field; banish it face-down.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/c6/KurikaraDivincarnate-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/24/KurikaraDivincarnate-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Kurikara Divincarnate</h1>
+            <h2>Effect Monster</h2>
+            <h2>Fairy/FIRE/Level 1/ATK 1500/DEF 1500</h2>
+            <p>Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing all face-up monsters on the field that activated their effects this turn in your opponent's Monster Zone. Gains 1500 ATK for each monster Tributed to Special Summon this card. During your End Phase: You can target 1 monster in your opponent's GY; Special Summon it to your field. You can only use this effect of "Kurikara Divincarnate" once per turn.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
@@ -948,6 +1660,44 @@
             <p>While you control a Set card, your opponent cannot target this card with card effects, also it cannot be destroyed by your opponent's card effects. You can only use each of the following effects of "Lady Labrynth of the Silver Castle" once per turn. If a "Labrynth" card or effect or a Normal Trap Card was activated this turn, except "Lady Labrynth of the Silver Castle" (Quick Effect): You can Special Summon this card from your hand in Defense Position. When a Normal Trap Card is activated (Quick Effect): You can Set 1 Normal Trap with a different name directly from your Deck.</p>
         </div>
     </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/28/LadysDragonmaid-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/7f/LadysDragonmaid-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Lady's Dragonmaid</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Dragon/LIGHT/Level 8/ATK 2000/DEF 3000</h2>
+            <p>2 "Dragonmaid" monsters with the same Attribute but different Levels</p>
+            <p>Must first be Special Summoned (from your Extra Deck) by banishing the above monsters, 1 each from your field and GY. If this card is Special Summoned: You can Special Summon 1 Level 4 or lower "Dragonmaid" monster from your Deck. During the Standby Phase: You can Fusion Summon 1 Dragon Fusion Monster from your Extra Deck, by shuffling its materials from your field and/or banishment into the Deck. You can only use each effect of "Lady's Dragonmaid" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b0/LightandDarknessDragonlord-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f7/LightandDarknessDragonlord-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Light and Darkness Dragonlord</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Dragon/LIGHT/Level 10/ATK 3400/DEF 3000</h2>
+            <p>1 Level 8 LIGHT Dragon monster + 1 Level 8 DARK Dragon monster</p>
+            <p>Must be Fusion Summoned. While face-up on the field, this card is also DARK-Attribute. Once per Chain, if a Spell/Trap Card, or monster effect, is activated (Quick Effect): This card loses exactly 1000 ATK/DEF, and if it does, negate the activation. If this card in its owner's possession is destroyed by an opponent's card: You can target 1 Dragon monster in your GY; Special Summon it.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
@@ -964,6 +1714,118 @@
             <h2>Effect Monster</h2>
             <h2>Fiend/DARK/Level 8/ATK 2900/DEF 1900</h2>
             <p>Your opponent cannot activate monster effects in response to the activation of your Normal Trap Cards. You can only use each of the following effects of "Lovely Labrynth of the Silver Castle" once per turn. You can target 1 Normal Trap in your GY; Set it to your field, but it cannot be activated unless you control a Fiend monster. If another monster(s) leaves the field by your Normal Trap effect (except during the Damage Step): You can destroy 1 card in your opponent's hand (at random) or their field.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/2b/LunalightLeoDancer-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//1/14/LunalightLeoDancer-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Lunalight Leo Dancer</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Beast-Warrior/DARK/Level 10/ATK 3500/DEF 3000</h2>
+            <p>"Lunalight Panther Dancer" + 2 "Lunalight" monsters</p>
+            <p>Must be Fusion Summoned with the above Fusion Materials. Your opponent cannot target this card with card effects, also it cannot be destroyed by your opponent's card effects. Can make a second attack during each Battle Phase. Once per turn, at the end of the Damage Step, if this card attacked a monster: You can destroy all Special Summoned monsters your opponent controls.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/9e/LunalightLigerDancer-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/25/LunalightLigerDancer-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Lunalight Liger Dancer</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Beast-Warrior/DARK/Level 12/ATK 3800/DEF 3000</h2>
+            <p>"Lunalight Leo Dancer" + 3 "Lunalight" monsters</p>
+            <p>Must be Fusion Summoned with the above Fusion Materials. Unaffected by card effects, except "Lunalight" cards. Can make a second attack during each Battle Phase. Once per turn (Quick Effect): You can send 1 "Lunalight" monster from your Extra Deck to the GY; destroy all your opponent's Special Summoned monsters.</p>
+        </div>
+    </section>
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//9/97/JunkWarrior-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/08/JunkWarrior-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Mannadium Prime-Heart</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Fairy/LIGHT/Level 10/ATK 3000/DEF 3000</h2>
+            <p>1+ Tuners + 1 LIGHT monster</p>
+            <p>This card can attack a number of times each Battle Phase, up to the number of Tuners used for its Synchro Summon. If this card was Synchro Summoned using a "Mannadium" Tuner as material, your opponent cannot target it with card effects. If this face-up Synchro Summoned card in its owner's control leaves the field because of an opponent's card: You can Special Summon 1 of your monsters with 1500 ATK/2100 DEF, or your "Visas Starfrost", that is banished or in your GY.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/a6/MannadiumPrimeHeart-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/86/MannadiumPrimeHeart-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Master Peace, the True Dracoslaying King</h1>
+            <h2>Effect Monster</h2>
+            <h2>Wyrm/LIGHT/Level 8/ATK 2950/DEF 2950</h2>
+            <p>To Tribute Summon this card face-up, you can Tribute Continuous Spells/Traps you control, as well as monsters. Unaffected by the effects of cards with the same card type (Monster, Spell, and/or Trap) as the original card type of the cards Tributed for its Tribute Summon. Once per turn, if you control this Tribute Summoned monster (Quick Effect): You can banish 1 Continuous Spell/Trap from your GY, then target 1 other card on the field; destroy it.</p>
+        </div>
+    </section>
+    <section class="monster ritual">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f8/MegalithAratron-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f5/MegalithAratron-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Megalith Aratron</h1>
+            <h2>Ritual Monster</h2>
+            <h2>Rock/EARTH/Level 8/ATK 2000/DEF 3000</h2>
+            <p>You can Ritual Summon this card with a "Megalith" card. During the Main Phase (Quick Effect): You can discard this card; Ritual Summon 1 "Megalith" Ritual Monster from your hand, by Tributing monsters from your hand or field whose total Levels equal or exceed its Level. When your opponent activates a card or effect that targets a card you control (Quick Effect): You can place 1 Ritual Monster from your GY on the bottom of the Deck, and if you do, negate that activation, and if you do that, destroy it. You can only use each effect of "Megalith Aratron" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1f/MillenniumEyesRestrict-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/0c/MillenniumEyesRestrict-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Millennium-Eyes Restrict</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Spellcaster/DARK/Level 1/ATK 0/DEF 0</h2>
+            <p>"Relinquished" + 1 Effect Monster</p>
+            <p>Once per turn, when your opponent activates a monster effect (Quick Effect): You can target 1 Effect Monster in your opponent's field or GY; equip that target to this card you control. Gains ATK/DEF equal to that equipped monster's. Monsters with the same original name as that equipped monster cannot attack, also their effects are negated.</p>
         </div>
     </section>
     <section class="monster effect">
@@ -1005,6 +1867,25 @@
     <section class="monster xyz">
         <div class="img-container">
             <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//4/4d/Number38HopeHarbingerDragonTitanicGalaxy-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b1/Number38HopeHarbingerDragonTitanicGalaxy-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number 38: Hope Harbinger Dragon Titanic Galaxy</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Dragon/LIGHT/Rank 8/ATK 3000/DEF 2500</h2>
+            <p>2 Level 8 monsters</p>
+            <p>Once per turn, when a Spell Card or effect is activated on the field (Quick Effect): You can negate that effect, and if you do, attach that card to this card as material. When an opponent's monster declares an attack: You can detach 1 material from this card; change the attack target to this card and perform damage calculation. If another face-up Xyz Monster(s) you control is destroyed by battle or card effect: You can target 1 face-up Xyz Monster you control; it gains ATK equal to 1 of those destroyed monster's original ATK.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//1/1a/Number39Utopia-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/df40kq9-825707a4-d26a-4879-a7b3-f59833405383.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGY0MGtxOS04MjU3MDdhNC1kMjZhLTQ4NzktYTdiMy1mNTk4MzM0MDUzODMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cIGj7LnRZhaY7tBrcK9qIPtphc66nmAGFXw8hy-Xisw');"></div>
             </div>
@@ -1019,6 +1900,25 @@
             <h2>Warrior/LIGHT/Rank 4/ATK 2500/DEF 2000</h2>
             <p>2 Level 4 monsters</p>
             <p>When a monster declares an attack: You can detach 1 material from this card; negate the attack. If this card is targeted for an attack, while it has no material: Destroy this card.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/61/Number69HeraldryCrestDarkMatterDemolition-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/dkik766-78b8ad5c-09b9-4d0f-8349-d2068b753d10.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGtpazc2Ni03OGI4YWQ1Yy0wOWI5LTRkMGYtODM0OS1kMjA2OGI3NTNkMTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0OBHert01vUlD2RFCLej7Db9-RJ7pn3rUIZY8vXr2wo');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number 69: Heraldry Crest - Dark Matter Demolition</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Psychic/LIGHT/Rank 4/ATK 3100/DEF 1900</h2>
+            <p>5 Level 4 monsters</p>
+            <p>Cannot be destroyed by battle or card effects. Once per turn (Quick Effect): You can detach 1 material from this card, then target 1 face-up monster your opponent controls; that monster's name becomes "Unknown". Negate any "Unknown" effects activated by your opponent.</p>
         </div>
     </section>
     <section class="monster xyz">
@@ -1043,6 +1943,44 @@
     <section class="monster xyz">
         <div class="img-container">
             <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//4/4a/NumberC1NumeronChaosGateSunya-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/04/NumberC1NumeronChaosGateSunya-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number C1: Numeron Chaos Gate Sunya</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Machine/DARK/Rank 2/ATK 2000/DEF 1000</h2>
+            <p>4 Level 2 monsters</p>
+            <p>You can also Xyz Summon this card by using "Number 1: Numeron Gate Ekam" you control as material. (Transfer its materials to this card.) If this card is Xyz Summoned: Banish all monsters on the field. Once per turn, during your next Standby Phase after this card was banished: You can Special Summon this banished card, then if "Numeron Network" is in your Field Zone, inflict damage to your opponent equal to the combined ATK of all banished Xyz Monsters.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/22/NumberC32SharkDrakeLeVeiss-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/39/NumberC32SharkDrakeLeVeiss-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number C32: Shark Drake LeVeiss</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Sea Serpent/WATER/Rank 5/ATK 3100/DEF 2600</h2>
+            <p>4 Level 5 monsters</p>
+            <p>You can also Xyz Summon this card by discarding 1 Spell, and using a Rank 4 "Shark Drake" Xyz Monster you control as material. (Transfer its materials to this card.) Once per turn (Quick Effect): You can detach 1 material from this card, then target 1 Effect Monster your opponent controls; negate its effects, and if you do, its ATK/DEF become 0. This card can make a second attack during each Battle Phase, also if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//7/78/NumberC62NeoGalaxyEyesPrimePhotonDragon-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/75/NumberC62NeoGalaxyEyesPrimePhotonDragon-MADU-EN-VG-NC.png');"></div>
             </div>
@@ -1059,6 +1997,44 @@
             <p>You can also Xyz Summon this card by using "Number 62: Galaxy-Eyes Prime Photon Dragon" you control. (Transfer its materials to this card.) At the start of your Battle Phase: You can detach 1 material from this card; this card can make up to 3 attacks on monsters during this Battle Phase. If this card has "Galaxy-Eyes Photon Dragon" as material, it gains these effects.
             <br>●Unaffected by your opponent's monster effects.
             <br>●Gains ATK equal to the combined Levels/Ranks of its attached materials x 100.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/82/NumberC88GimmickPuppetDisasterLeo-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/34/NumberC88GimmickPuppetDisasterLeo-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number C88: Gimmick Puppet Disaster Leo</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Machine/DARK/Rank 9/ATK 3500/DEF 2500</h2>
+            <p>4 Level 9 monsters</p>
+            <p>Must be Special Summoned with a "Rank-Up-Magic" Spell targeting "Number 88: Gimmick Puppet of Leo". Neither player can target this card on the field with card effects. Once per turn: You can detach 1 material from this card; inflict 1000 damage to your opponent. During your End Phase, if your opponent's LP are 2000 or less, and this card has no materials, you win the Duel.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/b1/NumberC101SilentHonorDARK-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/31/NumberC101SilentHonorDARK-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number C101: Silent Honor DARK</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Aqua/WATER/Rank 5/ATK 2800/DEF 1500</h2>
+            <p>3 Level 5 monsters</p>
+            <p>Once per turn: You can target 1 Special Summoned monster your opponent controls; attach it to this card as material. When this card is destroyed and sent to the GY while it has material: You can Special Summon this card from your GY, then gain LP equal to the original ATK of this card. "Number 101: Silent Honor ARK" must be in your GY to activate and to resolve this effect. If this card is Special Summoned this way, it cannot attack for the rest of this turn.</p>
         </div>
     </section>
     <section class="monster xyz">
@@ -1121,6 +2097,25 @@
             <p>Gains ATK/DEF equal to the combined Ranks of all Xyz Monsters you control and in your opponent's GY x 500. Your opponent's monsters cannot target monsters for attacks, except this one, also your opponent cannot target other cards on the field with card effects. Once per turn, when your opponent activates a card or effect on the field (Quick Effect): You can detach 1 material from this card; take control of 1 monster your opponent controls, also for the rest of this turn, this card cannot be destroyed by battle or card effects.</p>
         </div>
     </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/ed/NumberS39UtopiatheLightning-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/30/NumberS39UtopiatheLightning-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Number S39: Utopia the Lightning</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Warrior/LIGHT/Rank 5/ATK 2500/DEF 2000</h2>
+            <p>3 Level 5 LIGHT monsters</p>
+            <p>You can also Xyz Summon this card by using a Rank 4 "Utopia" monster you control as material. (Transfer its materials to this card.) Cannot be used as material for an Xyz Summon. If this card battles, your opponent cannot activate cards or effects until the end of the Damage Step. Once per Chain, during damage calculation, if this card battles an opponent's monster while this card has a "Utopia" Xyz Monster as material (Quick Effect): You can detach 2 materials from this card; this card's ATK becomes 5000 during that damage calculation only.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
@@ -1156,7 +2151,8 @@
             <h1>Odd-Eyes Arcray Dragon</h1>
             <h2>Fusion Pendulum Monster</h2>
             <h2>Dragon/LIGHT/PS13/Level 12/ATK 4000/DEF 2400</h2>
-            <p class="pend-effect">If you have 2 cards in your Pendulum Zones: You can Special Summon this card, then you can apply this effect. <br>●Shuffle 1 card from your Pendulum Zone into the Deck, then if it was added to your Extra Deck, you can Special Summon it, ignoring its Summoning conditions. <br>You can only use this effect of "Odd-Eyes Arcray Dragon" once per turn.</p>
+            <p class="pend-effect">If you have 2 cards in your Pendulum Zones: You can Special Summon this card, then you can apply this effect.
+            <br>●Shuffle 1 card from your Pendulum Zone into the Deck, then if it was added to your Extra Deck, you can Special Summon it, ignoring its Summoning conditions. <br>You can only use this effect of "Odd-Eyes Arcray Dragon" once per turn.</p>
             <p>4 Dragon monsters (1 Fusion, 1 Synchro, 1 Xyz, and 1 Pendulum)</p>
             <p>(This card is always treated as "Supreme King Z-ARC".)</p>
             <p>This face-down card in the Extra Deck must first be either Fusion Summoned, or Special Summoned by Tributing 1 Level 12 DARK "Supreme King Z-ARC". If this card is Special Summoned from the Extra Deck: You can place 1 Pendulum Monster from your Deck in your Pendulum Zone. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.</p>
@@ -1203,6 +2199,64 @@
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/62/PrimiteImperialDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//4/4c/PrimiteImperialDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Primite Imperial Dragon</h1>
+            <h2>Effect Monster</h2>
+            <h2>Dragon/EARTH/Level 6/ATK 2600/DEF 0</h2>
+            <p>Cannot be Normal Summoned, except by Tributing 1 Normal Monster (but can be Normal Set). During your opponent's Main Phase (Quick Effect): You can reveal this card in your hand; immediately after this effect resolves, Normal Summon 1 "Primite" monster. You can only use this effect of "Primite Imperial Dragon" once per turn. If this card is Tribute Summoned: You can apply these effects in sequence.
+            <br>●Negate the effects of all face-up monsters your opponent currently controls.
+            <br>●Banish all monsters your opponent controls with the same Type or Attribute as a Normal Monster in your GY.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/d1/PrometheanPrincessBestowerofFlames-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/3f/PrometheanPrincessBestowerofFlames-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Promethean Princess, Bestower of Flames</h1>
+            <h2>Link Monster</h2>
+            <h2>Fiend/FIRE/←→↓/ATK 2700/LINK-3</h2>
+            <p>2+ Effect Monsters</p>
+            <p>You cannot Special Summon, except FIRE monsters. You can only use each of the following effects of "Promethean Princess, Bestower of Flames" once per turn. During your Main Phase: You can Special Summon 1 FIRE monster from your GY. If a monster(s) is Special Summoned to your opponent's field, while this card is in your GY (except during the Damage Step): You can target 1 FIRE monster you control and 1 monster your opponent controls; destroy them, and if you do, Special Summon this card.</p>
+        </div>
+    </section>
+    <section class="monster xyz">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//8/87/RaidraptorRisingRebellionFalcon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/aa/RaidraptorRisingRebellionFalcon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Raidraptor - Rising Rebellion Falcon</h1>
+            <h2>Xyz Monster</h2>
+            <h2>Winged Beast/DARK/Rank 13/ATK 4000/DEF 3500</h2>
+            <p>5 Level 13 Winged Beast monsters</p>
+            <p>Unaffected by other cards' effects. If this card is Xyz Summoned: You can destroy as many cards your opponent controls as possible, then if this card has 3 or more "Raidraptor" Xyz Monsters with different names as material, inflict damage to your opponent equal to the combined original ATK of the destroyed monsters. Once per turn: You can detach 3 materials from this card, then target 1 "Raidraptor" Xyz Monster in your GY; this card gains that monster's effects until the End Phase.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//2/2c/RainbowDragon-MADU-EN-VG-artwork.png');"></div>
                 <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/0c/RainbowDragon-MADU-EN-VG-NC.png');"></div>
             </div>
@@ -1219,11 +2273,124 @@
             <p>Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having 7 "Crystal Beast" cards with different names on your field and/or GY. This card cannot activate the following effects the turn it is Special Summoned. (Quick Effect): You can send all "Crystal Beast" monsters you control to the GY; this card gains 1000 ATK for each monster sent to the GY. You can banish all "Crystal Beast" monsters from your GY; shuffle all cards on the field into the Deck.</p>
         </div>
     </section>
+    <section class="monster normal">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/d1/RedEyesBlackDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/83/RedEyesBlackDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Red-Eyes Black Dragon</h1>
+            <h2>Normal Monster</h2>
+            <h2>Dragon/DARK/Level 7/ATK 2400/DEF 2000</h2>
+            <p class="flav">A ferocious dragon with a deadly attack.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/d9/RedEyesDarkDragoon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/a5/RedEyesDarkDragoon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Red-Eyes Dark Dragoon</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Spellcaster/DARK/Level 8/ATK 3000/DEF 2500</h2>
+            <p>"Dark Magician" + "Red-Eyes Black Dragon" or 1 Dragon Effect Monster</p>
+            <p>Cannot be destroyed by card effects. Neither player can target this card with card effects. During your Main Phase: You can destroy 1 monster your opponent controls, and if you do, inflict damage to your opponent equal to that monster's original ATK. You can use this effect a number of times per turn up to the number of Normal Monsters used as Fusion Material for this card. Once per turn, when a card or effect is activated (Quick Effect): You can discard 1 card; negate the activation, and if you do, destroy that card, and if you do that, this card gains 1000 ATK.</p>
+        </div>
+    </section>
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/51/RedDragonArchfiend-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//a/a9/RedDragonArchfiend-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Red Dragon Archfiend</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Dragon/DARK/Level 8/ATK 3000/DEF 2000</h2>
+            <p>1 Tuner + 1+ non-Tuner monsters</p>
+            <p>After damage calculation, if this card attacked an opponent's Defense Position monster: Destroy all Defense Position monsters your opponent controls. Once per turn, during your End Phase: Destroy all other monsters you control that did not declare an attack this turn. This card must be face-up on the field to activate and to resolve this effect.</p>
+        </div>
+    </section>
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/07/RedSupernovaDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/25/RedSupernovaDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Red Supernova Dragon</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Dragon/DARK/Level 12/ATK 4000/DEF 3000</h2>
+            <p>3 Tuners + 1+ non-Tuner Synchro Monsters</p>
+            <p>Must first be Synchro Summoned. Gains 500 ATK for each Tuner in your GY. Cannot be destroyed by an opponent's card effects. Once per turn, when your opponent's monster effect is activated, or when an opponent's monster declares an attack (Quick Effect): You can activate this effect; banish this card, also banish all cards your opponent controls. Once per turn, during your next End Phase after this card was banished by its own effect: Special Summon this banished card.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/64/ScareclawTriHeart-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/80/ScareclawTriHeart-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</bsutton>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Scareclaw Tri-Heart</h1>
+            <h2>Link Monster</h2>
+            <h2>Beast-Warrior/DARK/↙↘↓/ATK 0/LINK-3</h2>
+            <p>3 Effect Monsters</p>
+            <p>Must be Link Summoned. All face-up monsters on the field are changed to Defense Position. Unaffected by the activated effects of Defense Position monsters. Once per turn, if this card is in the Extra Monster Zone: You can target 1 Level 3 "Scareclaw" monster in your GY; Special Summon it, and if you do, add 1 "Scareclaw" monster from your Deck to your hand, also you cannot Special Summon monsters for the rest of this turn, except "Scareclaw" monsters.</p>
+        </div>
+    </section>
+    <section class="monster synchro">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/63/ScarredDragonArchfiend-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/81/ScarredDragonArchfiend-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Scarred Dragon Archfiend</h1>
+            <h2>Synchro Monster</h2>
+            <h2>Dragon/DARK/Level 8/ATK 3000/DEF 2500</h2>
+            <p>1 Tuner + 1+ non-Tuner DARK monsters</p>
+            <p>This card's name becomes "Red Dragon Archfiend" while on the field or in the GY. If this card is sent from the Monster Zone to the GY: You can Special Summon 1 "Red Dragon Archfiend" from your Extra Deck (this is treated as a Synchro Summon), then, if this card was sent to the GY as Synchro Material for a DARK Dragon Synchro Monster, you can destroy all Attack Position monsters your opponent controls. You can only use this effect of "Scarred Dragon Archfiend" once per turn.</p>
+        </div>
+    </section>
     <section class="monster synchro">
         <div class="img-container">
             <div class="slideshow">
                 <div class="slide active" style="background-image: url('https://ms.yugipedia.com//3/39/ShootingMajesticStarDragon-MADU-EN-VG-artwork.png');"></div>
-                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/de/ShootingMajesticStarDragon-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//8/81/ScarredDragonArchfiend-MADU-EN-VG-NC.png');"></div>
             </div>
             <div class="controls">
                 <button class="prevBtn">Previous</button>
@@ -1257,6 +2424,86 @@
             <p>Must be Synchro Summoned. This card can attack a number of times each Battle Phase, up to the number of non-Tuners used for its Synchro Summon. Once per turn, when a card or effect is activated (Quick Effect): You can negate the activation, and if you do, destroy it. When this face-up card leaves the field: You can Special Summon 1 "Shooting Star Dragon" from your Extra Deck.</p>
         </div>
     </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f8/SkyStrikerAceKagari-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/09/SkyStrikerAceKagari-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//3/31/SkyStrikerAceKagari-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/7c/SkyStrikerAceKagari-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Sky Striker Ace - Kagari</h1>
+            <h2>Link Monster</h2>
+            <h2>Machine/FIRE/↖/ATK 1500/LINK-1</h2>
+            <p>1 non-FIRE "Sky Striker Ace" monster</p>
+            <p>If this card is Special Summoned: You can target 1 "Sky Striker" Spell in your GY; add it to your hand. Gains 100 ATK for each Spell in your GY. You can only Special Summon "Sky Striker Ace - Kagari(s)" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//5/51/SkyStrikerAceShizuku-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b3/SkyStrikerAceShizuku-MADU-EN-VG-artwork-2.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f3/SkyStrikerAceShizuku-MADU-EN-VG-NC.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b4/SkyStrikerAceShizuku-MADU-EN-VG-NC-2.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Sky Striker Ace - Shizuku</h1>
+            <h2>Link Monster</h2>
+            <h2>Machine/WATER/↗/ATK 1500/LINK-1</h2>
+            <p>1 non-WATER "Sky Striker Ace" monster</p>
+            <p>Monsters your opponent controls lose 100 ATK/DEF for each Spell in your GY. Once per turn, during the End Phase, if this card was Special Summoned this turn: You can add 1 "Sky Striker" Spell from your Deck to your hand, with a name different from the cards in your GY. You can only Special Summon "Sky Striker Ace - Shizuku(s)" once per turn.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//a/af/SkyStrikerAceZeke-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fffbb7f5-78d1-47b5-a59d-19225f518420/dj4fwpu-b9ffa81c-6d7d-467f-bdd9-1411474bedb1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9mZmZiYjdmNS03OGQxLTQ3YjUtYTU5ZC0xOTIyNWY1MTg0MjAvZGo0ZndwdS1iOWZmYTgxYy02ZDdkLTQ2N2YtYmRkOS0xNDExNDc0YmVkYjEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kZBzhz-d4ET4omVTjQvJLEZNGDwYOIBma87wA7Lnohc');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Sky Striker Ace - Zeke</h1>
+            <h2>Link Monster</h2>
+            <h2>Machine/DARK/↑↓/ATK 1500/LINK-2</h2>
+            <p>2 monsters, including a "Sky Striker Ace" monster</p>
+            <p>Must be Link Summoned. You can only Special Summon "Sky Striker Ace - Zeke(s)" once per turn. If this card is Link Summoned: You can target 1 face-up monster on the field; banish it until your opponent's next End Phase. Once per turn: You can target 1 other card you control; this card gains 1000 ATK, then, send the targeted card to the GY.</p>
+        </div>
+    </section>
+    <section class="monster link">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f1/SkyStrikerAceZero-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//6/61/SkyStrikerAceZero-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Sky Striker Ace = Zero</h1>
+            <h2>Link Monster</h2>
+            <h2>Machine/LIGHT/↙↘/ATK 2000/LINK-2</h2>
+            <p>2 "Sky Striker Ace" monsters</p>
+            <p>You can only Special Summon "Sky Striker Ace = Zero(s)" once per turn. Cannot be used as Link Material. If this card is Special Summoned: You can add 1 "Sky Striker" Spell from your Deck or GY to your hand. (Quick Effect): You can Tribute this card; Special Summon 1 "Sky Striker Ace - Raye" and 1 "Sky Striker Ace - Roze" from your Deck and/or GY, then you can destroy 1 card on the field. You can only use 1 "Sky Striker Ace = Zero" effect per turn, and only once that turn.</p>
+        </div>
+    </section>
     <section class="monster effect">
         <div class="img-container">
             <div class="slideshow">
@@ -1275,6 +2522,24 @@
             <h2>Effect Monster</h2>
             <h2>Divine Beast/DIVINE/Level 10/ATK ?/DEF ?</h2>
             <p>Requires 3 Tributes to Normal Summon (cannot be Normal Set). This card's Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Once per turn, during the End Phase, if this card was Special Summoned: Send it to the GY. Gains 1000 ATK/DEF for each card in your hand. If a monster(s) is Normal or Special Summoned to your opponent's field in Attack Position: That monster(s) loses 2000 ATK, then if its ATK has been reduced to 0 as a result, destroy it.</p>
+        </div>
+    </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//d/d5/SnakeEyesFlambergeDragon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/f1/SnakeEyesFlambergeDragon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Snake-Eyes Flamberge Dragon</h1>
+            <h2>Effect Monster</h2>
+            <h2>Dragon/FIRE/Level 8/ATK 3000/DEF 2500</h2>
+            <p>You can target 1 face-up monster on the field or in either GY; place it face-up in its owner's Spell & Trap Zone as a Continuous Spell. During your opponent's turn (Quick Effect): You can target 1 Monster Card treated as a Continuous Spell on the field; Special Summon it to your field. If this card is sent from the hand or field to the GY: You can Special Summon 2 Level 1 FIRE monsters from your GY. You can only use each effect of "Snake-Eyes Flamberge Dragon" once per turn.</p>
         </div>
     </section>
     <section class="monster synchro">
@@ -1331,7 +2596,7 @@
         <div class="text-container">
             <h1>Starving Venom Fusion Dragon</h1>
             <h2>Fusion Monster</h2>
-            <h2>Dargon/DARK/Level 8/ATK 2800/DEF 2000</h2>
+            <h2>Dragon/DARK/Level 8/ATK 2800/DEF 2000</h2>
             <p>2 DARK monsters on the field, except Tokens</p>
             <p>If this card is Fusion Summoned: You can make this card gain ATK equal to 1 opponent's Special Summoned monster, until the end of this turn. Once per turn: You can target 1 Level 5 or higher monster your opponent controls; until the End Phase, this card's name becomes that monster's original name, and replace this effect with that monster's original effects. If this Fusion Summoned card is destroyed: You can destroy all your opponent's Special Summoned monsters.</p>
         </div>
@@ -1395,6 +2660,25 @@
             <p>Must be Fusion Summoned. If this card is Special Summoned: Destroy all cards your opponent controls. Cannot be destroyed by your opponent's card effects. Your opponent cannot target this card with card effects. When this card destroys an opponent's monster by battle: You can Special Summon 1 "Supreme King Dragon" monster from your Deck or Extra Deck. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.</p>
         </div>
     </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/e3/TearlamentsKaleidoHeart-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//9/90/TearlamentsKaleidoHeart-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Tearlaments Kaleidoheart</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Fiend/DARK/Level 9/ATK 3000/DEF 3000</h2>
+            <p>"Tearlaments Reinoheart" + 2 Aqua monsters</p>
+            <p>Cannot be used as Fusion Material. If this card is Special Summoned, or if an Aqua monster is sent to your GY by card effect while this card is on the field: You can target 1 card your opponent controls; shuffle it into the Deck. If this card is sent to the GY by card effect: You can Special Summon this card, and if you do, send 1 "Tearlaments" card from your Deck to the GY. You can only use each effect of "Tearlaments Kaleido-Heart" once per turn.</p>
+        </div>
+    </section>
     <section class="monster link">
         <div class="img-container">
             <div class="slideshow">
@@ -1407,7 +2691,7 @@
             </div>
         </div>
         <div class="text-container">
-            <h1>The Arrival Cyberse @Ignister</h1>
+            <h1>The Arrival Cyberse <span>@</span>Ignister</h1>
             <h2>Link Monster</h2>
             <h2>Cyberse/DARK/↙←↑→↘↓/ATK 0/LINK-6</h2>
             <p>3+ monsters with different Attributes</p>
@@ -1452,6 +2736,62 @@
             <p>Cannot be Special Summoned. Requires 3 Tributes to Normal Summon (cannot be Normal Set). This card's Normal Summon cannot be negated. When Normal Summoned, other cards and effects cannot be activated. When this card is Normal Summoned: You can pay LP so that you only have 100 left; this card gains ATK/DEF equal to the amount of LP paid. You can pay 1000 LP, then target 1 monster on the field; destroy that target.</p>
         </div>
     </section>
+    <section class="monster effect">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/05/TheWingedDragonofRaImmortalPhoenix-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//e/ee/TheWingedDragonofRaImmortalPhoenix-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>The Winged Dragon of Ra - Immortal Phoenix</h1>
+            <h2>Effect Monster</h2>
+            <h2>Divine Beast/DIVINE/Level 10/ATK 4000/DEF 4000</h2>
+            <p>Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect. If "The Winged Dragon of Ra" is sent from the field to your GY while this card is in your GY: Special Summon this card. Cards and effects cannot be activated in response to this effect's activation. Unaffected by other cards' effects. You can pay 1000 LP; send 1 monster on the field to the GY. Once per turn, during the End Phase: Send this card to the GY, and if you do, Special Summon 1 "The Winged Dragon of Ra - Sphere Mode" from your hand, Deck, or GY, ignoring its Summoning conditions.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//e/e2/ThunderDragonColossus-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//f/fb/ThunderDragonColossus-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Thunder Dragon Colossus</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Thunder/DARK/Level 8/ATK 2600/DEF 2400</h2>
+            <p>"Thunder Dragon" + 1 Thunder monster</p>
+            <p>Must be either Fusion Summoned, or Special Summoned during the turn a Thunder monster's effect was activated in the hand, by Tributing 1 Thunder Effect non-Fusion Monster (in which case you do not use "Polymerization"). Cards cannot be added from the Main Deck to your opponent's hand except by drawing them. If this card would be destroyed by battle or card effect, you can banish 1 Thunder monster from your GY instead.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/c1/ThunderDragonTitan-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//b/b9/ThunderDragonTitan-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Thunder Dragon Titan</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Thunder/LIGHT/Level 10/ATK 3200/DEF 3200</h2>
+            <p>3 "Thunder Dragon" monsters</p>
+            <p>Must be either Fusion Summoned, or Special Summoned by banishing 1 Thunder monster from your hand and 1 Thunder Fusion Monster you control, except "Thunder Dragon Titan" (in which case you do not use "Polymerization"). When a Thunder monster's effect is activated in the hand, even during the Damage Step (Quick Effect): You can destroy 1 card on the field. If this card would be destroyed by card effect, you can banish 2 cards from your GY instead.</p>
+        </div>
+    </section>
     <section class="monster xyz">
         <div class="img-container">
             <div class="slideshow">
@@ -1490,6 +2830,25 @@
             <p>Cannot be destroyed by card effects, also your opponent cannot target it with monster effects. If this card is Fusion Summoned: You can destroy all Spells and Traps your opponent controls. When your opponent activates a card or effect on the field (Quick Effect): You can send 1 face-up "Ashened" card you control to the GY; destroy that card. You can only use this effect of "Veidos the Dragon of Endless Darkness" once per turn.</p>
         </div>
     </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//c/cc/ViciousAstraloud-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//d/d5/ViciousAstraloud-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Vicious Astraloud</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Fairy/DARK/Level 8/ATK 3000/DEF 2500</h2>
+            <p>"Visas Starfrost" + 1 monster with 1500 ATK/2100 DEF</p>
+            <p>Must be Special Summoned (from your Extra Deck) by banishing the above cards from your field and/or GY. Cannot be destroyed by battle. If this card is Special Summoned: You can target 1 other monster on the field; destroy it, and if you do, this card gains ATK equal to half of that monster's original ATK or DEF (whichever is higher).</p>
+        </div>
+    </section>
     <section class="monster link">
         <div class="img-container">
             <div class="slideshow">
@@ -1504,12 +2863,68 @@
         <div class="text-container">
             <h1>Worldsea Dragon Zealantis</h1>
             <h2>Link Monster</h2>
-            <h2>Sea Serpent/WATER/←↑→↓/ATK 0/LINK-4</h2>
+            <h2>Sea Serpent/WATER/←↑→↓/ATK 2500/LINK-4</h2>
             <p>1+ Effect Monsters</p>
             <p>You can only control 1 "Worldsea Dragon Zealantis". You can only use each of the following effects of "Worldsea Dragon Zealantis" once per turn. During your Main Phase: You can banish all monsters on the field, then Special Summon as many monsters as possible that were banished by this effect, to their owners' fields, face-up, or in face-down Defense Position. During the Battle Phase (Quick Effect): You can destroy cards on the field up to the number of co-linked monsters on the field.</p>
         </div>
     </section>
-
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//f/f3/XYZHyperDragonCannon-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//0/01/XYZHyperDragonCannon-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>XYZ-Hyper Dragon Cannon</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Machine/LIGHT/Level 9/ATK 3000/DEF 2800</h2>
+            <p>"X-Cross Cannon" + "Y-Yare Head" + "Z-Zillion Tank"</p>
+            <p>Must first be Special Summoned (from your Extra Deck) by banishing the above cards from your field and/or GY. Once per opponent's turn (Quick Effect): You can discard 1 card, then target 1 card your opponent controls; destroy it. You can banish this card from your field or GY and reveal 1 Level 8 LIGHT Machine Fusion Monster in your Extra Deck; Special Summon up to 3 of the Fusion Materials mentioned on it from your GY and/or banishment.</p>
+        </div>
+    </section>
+    <section class="monster fusion">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//b/ba/YubelTheLovingDefenderForever-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//7/76/YubelTheLovingDefenderForever-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Yubel - The Loving Defender Forever</h1>
+            <h2>Fusion Monster</h2>
+            <h2>Fiend/DARK/Level 12/ATK 0/DEF 0</h2>
+            <p>1 "Yubel" monster + 1+ Effect Monsters on the field</p>
+            <p>If this card is Fusion Summoned: You can inflict 500 damage to your opponent for each material used. You can only use this effect of "Yubel - The Loving Defender Forever" once per turn. Cannot be destroyed by battle or card effects, also you take no battle damage from battles involving this card. At the end of the Damage Step, if this card battled an opponent's monster: Inflict damage to your opponent equal to that opponent's monster's ATK, and if you do, banish that monster.</p>
+        </div>
+    </section>
+    <section class="monster pendulum">
+        <div class="img-container">
+            <div class="slideshow">
+                <div class="slide active" style="background-image: url('https://ms.yugipedia.com//0/05/Zefraath-MADU-EN-VG-artwork.png');"></div>
+                <div class="slide" style="background-image: url('https://ms.yugipedia.com//2/24/Zefraath-MADU-EN-VG-NC.png');"></div>
+            </div>
+            <div class="controls">
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="text-container">
+            <h1>Zefraath</h1>
+            <h2>Pendulum Monster</h2>
+            <h2>Rock/EARTH/PS5/Level 11/ATK 3450/DEF 2950</h2>
+            <p class="pend-effect">During your Main Phase: You can add 1 "Zefra" Pendulum Monster from your Deck to your Extra Deck face-up, and if you do, change this card's Pendulum Scale to be the same as that Pendulum Monster's, until the end of this turn. You can only use this effect of "Zefraath" once per turn.</p>
+            <p>Cannot be Normal Summoned/Set. Must be Special Summoned (from your face-up Extra Deck) by Tributing all monsters you control, including at least 3 "Zefra" monsters, and cannot be Special Summoned by other ways. After you Special Summon this card, you can conduct 1 Pendulum Summon of a "Zefra" monster(s) during your Main Phase this turn, in addition to your Pendulum Summon. (You can only gain this effect once per turn.) Once per turn: You can Tribute 1 monster; Special Summon 1 "Zefra" monster from your Deck.</p>
+        </div>
+    </section>
     <script src="anime.min.js"></script>
     <script src="anime-slideshow.js"></script>
 </body>
