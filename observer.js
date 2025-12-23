@@ -1,23 +1,49 @@
-// Define the observer options
-const options = {
-  root: null, // Use the viewport as the root
-  rootMargin: '0px', // No margin
-  threshold: 0.1 // Trigger when 10% of the image is visible
-};
+const bgSections = document.querySelectorAll('.monster');
+const slides = document.querySelectorAll('.slide');
 
-// Callback to load images when they become visible
-const callback = (entries, observer) => {
+const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target); // Stop observing the image once it's loaded
-    }
+    if (!entry.isIntersecting) return;
+
+    const el = entry.target;
+
+    // Fade in sections
+    anime({
+        targets: el,
+        opacity: [0, 1],
+        duration: 800,
+        easing: 'easeOutCubic',
+        delay: anime.stagger(150)
+    });
+    // Stop observing once loaded
+    observer.unobserve(el);
   });
-};
-
-// Create the Intersection Observer
-const observer = new IntersectionObserver(callback, options);
-
-// Observe all the images with class 'lazy'
-document.querySelectorAll('.monster').forEach(div => {
-  observer.observe(div);
+}, {
+  root: null,          // viewport
+  rootMargin: '200px', // preload before it appears
+  threshold: 0
 });
+
+const slideObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const el = entry.target;
+    const bg = el.dataset.bg;
+
+    if (bg) {
+      el.style.backgroundImage = `url("${bg}")`;
+      el.removeAttribute('data-bg');
+    }
+
+    // Stop observing once loaded
+    observer.unobserve(el);
+  });
+}, {
+  root: null,          // viewport
+  rootMargin: '200px', // preload before it appears
+  threshold: 0
+});
+
+bgSections.forEach(section => observer.observe(section));
+slides.forEach(slide => slideObserver.observe(slide));
