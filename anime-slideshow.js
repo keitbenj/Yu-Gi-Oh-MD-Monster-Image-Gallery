@@ -1,7 +1,6 @@
-
-window.onload = function(){
+document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.img-container').forEach(container => new AnimeSlideshow(container));
-}
+});
 
 class AnimeSlideshow{
     constructor(container){
